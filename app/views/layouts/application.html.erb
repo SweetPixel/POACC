@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>POACC |  <%= @title %></title>
+	<title>POACC</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<meta name="author" content="" />
@@ -25,7 +25,7 @@
 					<!-- HEADER: LOGO AREA -->
 					<div class="span4 logo">
 						<a class="logo" href="index.html">
-							<img alt="logo" title="bizstrap" src="img/logo.png">
+							<%= holder_tag '236x72' %>
 						</a>
 					</div>
 					<div class="span4 offset4">
@@ -148,7 +148,7 @@
 				<ul>
 					<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) - SLIDE 1 [SLIDE STYLE=BOXFADE] -->
 					<li class="slide1 slide" data-transition="boxfade" data-slotamount="5"  data-masterspeed="300">
-						<img alt="" src="img/slider01.png" />
+						<%= holder_tag '940x400','slide 1','social' %>
 						<div class="caption sft carousel-caption" data-x="110" data-y="110" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none;">
 							<p class="middle">Beautiful, clean, ultra-responsive & highly flexible</p>
 
@@ -166,7 +166,7 @@
 					</li>
 					<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) - SLIDE 2 [SLIDE STYLE=LEFT] -->
 					<li class="slide2 slide" data-transition="slideleft" data-slotamount="10"  data-masterspeed="300">
-						<img alt="" src="img/slider02.png" />
+						<%= holder_tag '940x400','slide 2','social' %>
 						<div class="caption sft carousel-caption" data-x="472" data-y="69" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none;">
 							<p class="middle">Is your business website mobile ready?</p>
 
@@ -186,7 +186,7 @@
 					</li>
 					<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) - SLIDE 3 [SLIDE STYLE=SLIDE DOWN] -->
 					<li class="slide3 slide" data-transition="slidedown" data-slotamount="1" data-masterspeed="300">
-						<img alt="" src="img/slider03.png" />
+						<%= holder_tag '940x400','slide 3','social' %>
 						<div class="caption sft carousel-caption" data-x="43" data-y="184" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none; padding-left: 0;">
 							<p class="middle">Create beautiful pages quickly and easily...</p>
 						</div>
@@ -199,7 +199,7 @@
 					</li>
 					<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) - SLIDE 4 [SLIDE STYLE=BOXFADE] -->
 					<li class="slide4 slide" data-transition="boxfade" data-slotamount="5"  data-masterspeed="300">
-						<img alt="" src="img/slider07.png" />
+						<%= holder_tag '940x400','slide 4','social' %>
 						<div class="caption sft carousel-caption" data-x="45" data-y="78" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none;">
 							<p class="middle">Slap the page with a Sticky Note!</p>
 
@@ -237,7 +237,7 @@
 					</li>                            
 					<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) - SLIDE 5 [SLIDE STYLE=SLOTFADE HORIZONTAL] -->
 					<li class="slide5 slide" data-transition="slotfade-horizontal"  data-masterspeed="300" data-slotamount="20">
-						<img alt="" src="img/slider04.png" />
+						<%= holder_tag '940x400','slide 5','social' %>
 						<div class="caption sft carousel-caption" data-x="468" data-y="71" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none; padding-left: 0;">
 							<p class="middle">Smart, very smart indeed!</p>
 						</div>
@@ -588,7 +588,7 @@
 </div>
 
 <!-- styler -->
-<div id="mtp-toggle" class="mtp-toggle-close"><i class="moon-droplet"></i></div>
+<!-- <div id="mtp-toggle" class="mtp-toggle-close"><i class="moon-droplet"></i></div>
 <div id="mtp-wrapper" style="">
 	<div id="mtp-header">Style Switcher</div>
 	<div id="mtp-content">
@@ -647,7 +647,7 @@
 			<li class="image_4"></li>				
 		</ul>
 	</div>
-</div>
+</div> -->
 <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>
