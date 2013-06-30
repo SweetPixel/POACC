@@ -13,8 +13,10 @@ group :development do
 end
 
 group :production do
-	gem 'pg'
+	#gem 'pg'
 end
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'

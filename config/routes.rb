@@ -1,4 +1,7 @@
 POACC::Application.routes.draw do
+  resources :contact 
+
+
   get "home/index"
   get "home/about"
   get "home/contact"
