@@ -2,49 +2,49 @@
 ---------------------------------------------------------------------- */
 
 .top_line {
-    background-color: #2773ae;
+    background-color: #27ae60;
 }
 
 /* Color that link text will appear as
 ---------------------------------------------------------------------- */
 
 a {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Color that appears when user hovers over a link
 ---------------------------------------------------------------------- */
 
 a:hover {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Text color of the active link in a drop down menu
 ---------------------------------------------------------------------- */
 
 .navbar .nav .open .dropdown-menu .active a {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Text color of the active link in a drop down menu when you hover over it
 ---------------------------------------------------------------------- */
 
 .navbar .nav .open .dropdown-menu .active a:hover {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Text color of the active navbar item
 ---------------------------------------------------------------------- */
 
 .navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active a > i, .navbar .nav .active a > i:hover {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Primary menu text color when you hover over it (does not include the sub-menu text)
 ---------------------------------------------------------------------- */
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Color of the stripe in a dropdown menu when you hover over vertical menu item
@@ -60,21 +60,21 @@ a:hover {
 ---------------------------------------------------------------------- */
 
 .navbar .nav > li .dropdown-menu li a:hover {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Color of the menu bar's sub-menu text when you hover over it and the color of both the primary and sub-menu text that has no sub-nav when you hover over it
 ---------------------------------------------------------------------- */
 
 .navbar .nav > li:hover a, .navbar .nav > li:hover a i {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Color of bar above active menu item or menu item when you hover over it
 ---------------------------------------------------------------------- */
 
 .navbar .nav .active > a, .navbar .nav li:hover > a {
-    border-top: 3px solid #2773ae;
+    border-top: 3px solid #27ae60;
 }
 
 /* Color of Twitter bar
@@ -88,14 +88,14 @@ a:hover {
 ---------------------------------------------------------------------- */
 
 .comments .name {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Headline that shows the number of comments on a blog post
 ---------------------------------------------------------------------- */
 
 .comments  h2 {
-    color: #2773ae;
+    color: #27ae60;
 }
 
 /* Theme colored dropcap (the standard dropcap is black)
