@@ -1,4 +1,9 @@
 POACC::Application.routes.draw do
+  resources :staffs
+
+  devise_for :admins
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  get "admin/index"
   resources :practices
 
   resources :contact 

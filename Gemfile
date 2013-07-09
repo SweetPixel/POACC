@@ -12,11 +12,23 @@ group :development do
 	gem 'sqlite3'
 end
 
+# enable protected attributes
+gem 'protected_attributes'
+
+# use postgresql for production
 group :production do
 	gem 'pg'
 end
 
+
+# Rails Admin gem for admin interface of things
+gem 'rails_admin'
+
+# Backbone js for the admin module
 gem 'rails-backbone'
+
+# Devise gem for the 
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'
@@ -27,7 +39,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-#twitter-bootstrap-rails
+#bootstrap gem for using bootstrap generators
 gem 'twitter-bootstrap-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
