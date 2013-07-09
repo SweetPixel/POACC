@@ -15,4 +15,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require holder
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/poacc
 //= require_tree .

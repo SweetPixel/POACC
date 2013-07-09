@@ -1,4 +1,6 @@
 POACC::Application.routes.draw do
+  resources :practices
+
   resources :contact 
 
 
