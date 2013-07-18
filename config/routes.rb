@@ -1,4 +1,10 @@
 POACC::Application.routes.draw do
+  resources :followups
+
+  resources :assessments
+
+  resources :patients
+
   resources :staffs
 
   devise_for :admins
@@ -14,6 +20,7 @@ POACC::Application.routes.draw do
   get "home/contact"
   get "home/staffservice"
   get "home/woundcare"
+  get "home/patients"
   root "home#index"
 
   

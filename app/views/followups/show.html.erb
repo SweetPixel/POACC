@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @followup.Date %>
+</p>
+
+<p>
+  <strong>Clinicalpicture:</strong>
+  <%= @followup.ClinicalPicture %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @followup.Plan %>
+</p>
+
+<%= link_to 'Edit', edit_followup_path(@followup) %> |
+<%= link_to 'Back', followups_path %>

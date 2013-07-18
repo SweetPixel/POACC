@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Complaints: MyText
+  Clinical: MyText
+  Investigation: MyText
+
+two:
+  Complaints: MyText
+  Clinical: MyText
+  Investigation: MyText

@@ -1,0 +1,30 @@
+<h1>Listing patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>For creating new patient click below</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.Name %></td>
+        <td><%= patient.Contact %></td>
+        <td><%= patient.Email %></td>
+        <td><%= patient.Address %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patient', new_patient_path %>
