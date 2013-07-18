@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Complaints:</strong>
+  <%= @assessment.Complaints %>
+</p>
+
+<p>
+  <strong>Clinical:</strong>
+  <%= @assessment.Clinical %>
+</p>
+
+<p>
+  <strong>Investigation:</strong>
+  <%= @assessment.Investigation %>
+</p>
+
+<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+<%= link_to 'Back', assessments_path %>

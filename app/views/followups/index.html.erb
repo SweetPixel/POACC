@@ -1,0 +1,31 @@
+<h1>Listing followups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Clinicalpicture</th>
+      <th>Plan</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @followups.each do |followup| %>
+      <tr>
+        <td><%= followup.Date %></td>
+        <td><%= followup.ClinicalPicture %></td>
+        <td><%= followup.Plan %></td>
+        <td><%= link_to 'Show', followup %></td>
+        <td><%= link_to 'Edit', edit_followup_path(followup) %></td>
+        <td><%= link_to 'Destroy', followup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Followup', new_followup_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Date: 2013-07-18
+  ClinicalPicture: MyText
+  Plan: MyText
+
+two:
+  Date: 2013-07-18
+  ClinicalPicture: MyText
+  Plan: MyText
