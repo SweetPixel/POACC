@@ -1,4 +1,5 @@
 POACC::Application.routes.draw do
+  get "orthpaedics/index"
   resources :staffs
 
   devise_for :admins
