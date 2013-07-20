@@ -15,6 +15,8 @@ end
 # enable protected attributes
 gem 'protected_attributes'
 
+gem 'appointments'
+
 # use postgresql for production
 group :production do
 	gem 'pg'
