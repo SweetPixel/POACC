@@ -20,7 +20,7 @@ group :production do
 	gem 'pg'
 end
 
-gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
+# gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
 
 # Rails Admin gem for admin interface of things
 gem 'rails_admin'
