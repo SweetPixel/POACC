@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/aliirz/spud_photos.git
+  revision: 4610977f015621629cd99e6b6bcb6d7dfe2c99ef
+  specs:
+    spud_photos (0.9.3)
+      paperclip
+      rails
+      spud_core
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,10 +36,18 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.10)
+    authlogic (3.3.0)
+      activerecord (>= 3.2)
+      activesupport (>= 3.2)
     bcrypt-ruby (3.1.0)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
+    breadcrumbs_on_rails (2.3.0)
     builder (3.1.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
@@ -79,6 +96,12 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.0.7)
+    paperclip (3.4.2)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.0)
+      mime-types
     pg (0.15.1)
     polyglot (0.3.3)
     protected_attributes (1.0.2)
@@ -144,6 +167,13 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
+    spud_core (0.6.4)
+      activesupport (>= 3.2.0)
+      authlogic
+      breadcrumbs_on_rails
+      jquery-rails
+      rails (>= 3.2.0)
+      will_paginate
     sqlite3 (1.3.7)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
@@ -168,6 +198,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -186,6 +217,7 @@ DEPENDENCIES
   rails_admin
   sass-rails (~> 4.0.0.rc2)
   sdoc
+  spud_photos!
   sqlite3
   therubyracer
   turbolinks
