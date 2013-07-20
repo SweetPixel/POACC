@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130718113612) do
+ActiveRecord::Schema.define(version: 20130720123358) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                              default: "", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20130718113612) do
     t.text     "Investigation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "followups", force: true do |t|
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20130718113612) do
     t.text     "Plan"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "patients", force: true do |t|
