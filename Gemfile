@@ -15,7 +15,7 @@ end
 # enable protected attributes
 gem 'protected_attributes'
 
-gem 'appointments'
+# gem 'appointments'
 
 # use postgresql for production
 group :production do
@@ -50,6 +50,8 @@ gem 'twitter-bootstrap-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
 
 #img holder for prototyping
 gem 'holder_rails'

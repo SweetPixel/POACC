@@ -1,5 +1,4 @@
 POACC::Application.routes.draw do
-
   get "orthpaedics/index"
 
   resources :followups
