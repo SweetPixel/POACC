@@ -7,6 +7,8 @@ POACC::Application.routes.draw do
   get "appointments/new_patient"
   get "appointments/old_patient"
 
+  post "appointments/create"
+
   resources :followups
 
   resources :assessments

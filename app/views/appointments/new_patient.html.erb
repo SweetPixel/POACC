@@ -1,2 +1,16 @@
 <div class="container">
+	<div class="page-header">
+		<h1>Request date and time of appointment <small>We will contact you for confirmation</small></h1>
+	</div>
+	<%= simple_form_for @appointment, :url => { :action => "create" } do |a| %>
+	<label class="label">Select Date</label>
+	<br />
+	<%= a.date_select :day %>
+	<br />
+	<label class="label">Select Time</label>
+	<br />
+	<%= a.time_select :requested_time %>
+	<br />
+	<%= a.button :submit, :class => 'btn btn-primary', :value => "Request Appointment" %>
+	<% end %>
 </div>
