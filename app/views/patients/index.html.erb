@@ -1,30 +1,44 @@
-<h1>Listing patients</h1>
-
-<table>
+<%- model_class = Patient -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>For creating new patient click below</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:Name) %></th>
+      <th><%= model_class.human_attribute_name(:Contact) %></th>
+      <th><%= model_class.human_attribute_name(:Email) %></th>
+      <th><%= model_class.human_attribute_name(:Address) %></th>
+      <th><%= model_class.human_attribute_name(:reg_no) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @patients.each do |patient| %>
       <tr>
+        <td><%= link_to patient.id, patient_path(patient) %></td>
         <td><%= patient.Name %></td>
         <td><%= patient.Contact %></td>
         <td><%= patient.Email %></td>
         <td><%= patient.Address %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= patient.reg_no %></td>
+        <td><%=l patient.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_patient_path(patient), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      patient_path(patient),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Patient', new_patient_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_patient_path,
+            :class => 'btn btn-primary' %>

@@ -53,6 +53,9 @@ gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 
+gem 'simple_form'
+
+
 #img holder for prototyping
 gem 'holder_rails'
 

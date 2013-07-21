@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day: 2013-07-21
+  requested_time: 2013-07-21 11:55:37
+  patient_id: 1
+
+two:
+  day: 2013-07-21
+  requested_time: 2013-07-21 11:55:37
+  patient_id: 1

@@ -1,5 +1,11 @@
 POACC::Application.routes.draw do
+  # resources :appointments
+
   get "orthpaedics/index"
+  
+  get "appointments/index"
+  get "appointments/new_patient"
+  get "appointments/old_patient"
 
   resources :followups
 
