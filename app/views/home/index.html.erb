@@ -58,9 +58,9 @@
 				<!-- MAIN CONTENT AREA: bizstrap CUSTOM - HERO BLOCK 2 -->
 				<div class="span5 home-block">
 					<div class="grey-box hero-block-2">
-						<h2><a href="index.html#">Contact us for a Consultation</a></h2>
-						<p><img alt="" src="img/release_icon.png" />Lorem Ipsum.</p>
-						<a href="/home/contact" class="btn btn-warning"><i></i>Get in touch</a>
+						<h2><%= link_to "Request an appointment",:controller => "appointments", :action => "index" %></h2>
+						<p><img alt="" src="img/release_icon.png" />Request an appointment with us today!</p>
+						<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-warning" %>
 					</div>
 				</div>
 			</div>

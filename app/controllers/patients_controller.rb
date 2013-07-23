@@ -17,6 +17,9 @@ class PatientsController < ApplicationController
     @patient = Patient.new
   end
 
+  def old
+  end
+
   # GET /patients/1/edit
   def edit
   end
