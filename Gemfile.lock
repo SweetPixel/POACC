@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/aliirz/spud_photos.git
-  revision: 570db8f07bf8a11167853135abcbc3d074412b68
+  revision: c88ea2f5372cb9afa53a347ed6b91043bd5ffcfb
   specs:
     spud_photos (0.9.4)
       paperclip
