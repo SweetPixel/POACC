@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="page-header">
+		<h1>Request date and time of appointment <small>We will contact you for confirmation</small></h1>
+	</div>
+	<%= form_tag("/appointments/createold",method: "post") do %>
+		<%= label_tag(:reg_no, "Registration No.") %>
+		<%= text_field_tag(:reg_no) %>
+		<%= label_tag(:reg_no, "Select Date") %>
+		<%= select_date Date.today, prefix: :request_date %>
+		<%= label_tag(:reg_no, "Select Time") %>
+		<%= select_time Time.now, prefix: :request_time %>
+		<br />
+		<%= submit_tag("Request Appointment") %>
+	<% end %>
+</div>

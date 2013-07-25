@@ -6,6 +6,10 @@ POACC::Application.routes.draw do
   get "appointments/index"
   get "appointments/new_patient"
   get "appointments/old_patient"
+  get "appointments/booked"
+  get "appointments/not_booked"
+
+  post "appointments/createold"
 
   post "appointments/create"
 
