@@ -12,6 +12,11 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem 'bootstrap-timepicker-rails'
+
+gem 'bootstrap-datepicker-rails'
+
+
 # enable protected attributes
 gem 'protected_attributes'
 

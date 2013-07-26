@@ -29,9 +29,9 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
     if(Patient.all != nil)
-      @patient.reg_no = rand()
+      @patient.reg_no = Patient.last.reg_no + 1 
     else
-      @patient.reg_no = 1
+      @patient.reg_no = Patient_Number.first.start
     end
     respond_to do |format|
       if @patient.save
