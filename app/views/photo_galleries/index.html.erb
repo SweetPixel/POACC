@@ -1,18 +1,21 @@
 <% content_for :title do %>
-  Photo Galleries | <%= Spud::Core.site_name %>
+Photo Galleries | <%= Spud::Core.site_name %>
 <% end %>
 
 <% content_for :head do %>
-  
+
 <% end %>
+<div class="container">
+	<div class="page-header"><h1>Photo Galleries</h1></div>
 
-<h2>Photo Galleries</h2>
-
-<div id="spud_photo_galleries">
-  <% @photo_galleries.each do |gallery| %>
-    <div class="spud_photo_gallery_thumbnail">
-      <h3><%= link_to gallery.title, (gallery.albums.length == 1 ? photo_gallery_photo_album_path(gallery.url_name, gallery.albums.first.url_name) : photo_gallery_photo_albums_path(gallery.url_name)) %></h3>
-      <%= image_tag gallery.top_photo_url(:medium), :title => gallery.title %>
-    </div>
-  <% end %>
+	<div class="row" id="spud_photo_galleries">
+		<% @photo_galleries.each do |gallery| %>
+		<div class="span3">
+			<div class="spud_photo_gallery_thumbnail">
+				<h3><%= link_to gallery.title, (gallery.albums.length == 1 ? photo_gallery_photo_album_path(gallery.url_name, gallery.albums.first.url_name) : photo_gallery_photo_albums_path(gallery.url_name)) %></h3>
+				<%= image_tag gallery.top_photo_url(:medium), :title => gallery.title %>
+			</div>
+		</div>
+		<% end %>
+	</div>
 </div>

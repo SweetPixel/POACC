@@ -33,6 +33,8 @@ gem 'rails_admin'
 # Backbone js for the admin module
 gem 'rails-backbone'
 
+gem 'rubylight'
+
 # Devise gem for the 
 gem 'devise'
 
