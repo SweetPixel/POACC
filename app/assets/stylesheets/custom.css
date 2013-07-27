@@ -2,6 +2,10 @@
 
 /*Custom Landscapes Start*/
 
+#footer{
+    padding-top: 30px;
+}
+
 #out_container {
     margin:0 auto;
     background:#fff;

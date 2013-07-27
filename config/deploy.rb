@@ -5,11 +5,11 @@ server "sweetpixelstudios.com", :web, :app, :db, primary: true
 set :application, "poacc"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "."
+set :repository, "git@git.sweetpixelstudios.com:sweetpixel/poacc.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
@@ -25,38 +25,27 @@ namespace :deploy do
     end
   end
 
-
-  desc "tail production log files" 
-  task :tail_logs, :roles => :app do
-    run "tail -f #{shared_path}/log/production.log" do |channel, stream, data|
-    puts  # for an extra line break before the host name
-    puts "#{channel[:host]}: #{data}" 
-    break if stream == :err    
+  task :setup_config, roles: :app do
+    sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
+    sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
+    run "mkdir -p #{shared_path}/config"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
+    puts "Now edit the config files in #{shared_path} if necessary."
   end
-end
+  after "deploy:setup", "deploy:setup_config"
 
-
-task :setup_config, roles: :app do
-  sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-  sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-  run "mkdir -p #{shared_path}/config"
-  put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
-  puts "Now edit the config files in #{shared_path} if necessary."
-end
-after "deploy:setup", "deploy:setup_config"
-
-task :symlink_config, roles: :app do
-  run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-end
-after "deploy:finalize_update", "deploy:symlink_config"
-
-desc "Make sure local git is in sync with remote."
-task :check_revision, roles: :web do
-  unless `git rev-parse HEAD` == `git rev-parse origin/master`
-    puts "WARNING: HEAD is not the same as origin/master"
-    puts "Run `git push` to sync changes."
-    exit
+  task :symlink_config, roles: :app do
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
-end
-before "deploy", "deploy:check_revision"
+  after "deploy:finalize_update", "deploy:symlink_config"
+
+  desc "Make sure local git is in sync with remote."
+  task :check_revision, roles: :web do
+    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+      puts "WARNING: HEAD is not the same as origin/master"
+      puts "Run `git push` to sync changes."
+      exit
+    end
+  end
+  before "deploy", "deploy:check_revision"
 end
