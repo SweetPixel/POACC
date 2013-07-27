@@ -66,6 +66,8 @@ gem 'jquery-ui-rails'
 gem 'simple_form'
 
 
+gem 'newrelic_rpm'
+
 #img holder for prototyping
 gem 'holder_rails'
 
