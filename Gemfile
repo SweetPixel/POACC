@@ -27,13 +27,18 @@ group :production do
 	gem 'pg'
 end
 
-# gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
+gem 'rails-observers'
+gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
 
 # Rails Admin gem for admin interface of things
 gem 'rails_admin'
 
 # Backbone js for the admin module
 gem 'rails-backbone'
+
+gem 'rubylight'
 
 # Devise gem for the 
 gem 'devise'
