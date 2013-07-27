@@ -2,14 +2,14 @@ require "bundler/capistrano"
 
 server "sweetpixelstudios.com", :web, :app, :db, primary: true
 
-set :application, "blog"
+set :application, "poacc"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, .
+set :repository, "."
 set :branch, "master"
 
 default_run_options[:pty] = true
@@ -29,7 +29,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    # put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
