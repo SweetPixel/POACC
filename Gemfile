@@ -20,6 +20,8 @@ group :production do
 	gem 'pg'
 end
 
+gem 'paperclip'
+
 
 # Rails Admin gem for admin interface of things
 gem 'rails_admin'

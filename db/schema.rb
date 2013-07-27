@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130718113612) do
+ActiveRecord::Schema.define(version: 20130720193738) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                              default: "", null: false
@@ -39,6 +39,12 @@ ActiveRecord::Schema.define(version: 20130718113612) do
     t.datetime "updated_at"
   end
 
+  create_table "categories", force: true do |t|
+    t.text     "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "followups", force: true do |t|
     t.date     "Date"
     t.text     "ClinicalPicture"
@@ -52,6 +58,13 @@ ActiveRecord::Schema.define(version: 20130718113612) do
     t.integer  "Contact"
     t.text     "Email"
     t.text     "Address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", force: true do |t|
+    t.text     "title"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -84,6 +97,12 @@ ActiveRecord::Schema.define(version: 20130718113612) do
     t.string   "qualification"
     t.string   "biography"
     t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sub_categories", force: true do |t|
+    t.text     "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

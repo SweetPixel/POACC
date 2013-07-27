@@ -24,6 +24,11 @@ POACC::Application.routes.draw do
   get "home/staffservice"
   get "home/woundcare"
   get "home/patients"
+  get "home/trauma"
+  get "home/bonehealth"
+  get "home/bonehealthdetail"
+  get "home/charityprojects"
+  get "home/fellowships"
   root "home#index"
 
   
