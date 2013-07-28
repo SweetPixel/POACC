@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require lightbox
 //= require holder
 //= require underscore
 //= require backbone

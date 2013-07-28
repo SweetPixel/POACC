@@ -14,6 +14,32 @@ RailsAdmin.config do |config|
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_admin } # auto-generated
 
+  config.model 'Patient' do
+    object_label_method :Name
+  end
+
+
+  config.model Assessment do
+    edit do
+      field :patient, :belongs_to_association
+    end
+  end
+
+  if defined?(WillPaginate)
+    module WillPaginate
+      module ActiveRecord
+        module RelationMethods
+          def per(value = nil) per_page(value) end
+            def total_count() count end
+            end
+          end
+          module CollectionMethods
+            alias_method :num_pages, :total_pages
+          end
+        end
+      end
+
+
   # If you want to track changes on your models:
   # config.audit_with :history, 'Admin'
 
@@ -27,10 +53,10 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  # config.excluded_models = ['Admin', 'Practice']
+  # config.excluded_models = ['spud_admin_permission', 'spud_photo','spud_photo_album','spud_photo_albums_photo','spud_photo_galleries_album','spud_photo_gallery','spud_user','spud_user_setting']
 
   # Include specific models (exclude the others):
-  # config.included_models = ['Admin', 'Practice']
+  config.included_models = ['Admin','Appointment', 'Practice','Assessment','Followup','Patient','Staff','PatientNumbers']
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]

@@ -17,6 +17,9 @@ class PatientsController < ApplicationController
     @patient = Patient.new
   end
 
+  def old
+  end
+
   # GET /patients/1/edit
   def edit
   end
@@ -25,10 +28,15 @@ class PatientsController < ApplicationController
   # POST /patients.json
   def create
     @patient = Patient.new(patient_params)
-
+    if(Patient.all != nil)
+      @patient.reg_no = Patient.last.reg_no + 1 
+    else
+      @patient.reg_no = Patient_Number.first.start
+    end
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        session[:reg_no] = @patient.reg_no
+        format.html { redirect_to  controller: "appointments", action: "new_patient"}
         format.json { render action: 'show', status: :created, location: @patient }
       else
         format.html { render action: 'new' }
@@ -71,4 +79,4 @@ class PatientsController < ApplicationController
     def patient_params
       params.require(:patient).permit(:Name, :Contact, :Email, :Address)
     end
-end
+  end

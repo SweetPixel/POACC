@@ -1,0 +1,17 @@
+<div class="container">
+	<h2>Select Patient Type</h2>
+	<div class="row-fluid">
+		<div class="span9">
+			<div class="well">
+				<%= link_to "New Patient", { :action => "new", :controller => "patients"}, :class => "btn btn-primary" %>
+				<%= link_to "Old Patient", { :action => "old_patient", :controller => "appointments" }, :class => "btn btn-success" %>
+			</div>
+		</div>
+		<div class="span3">
+			<div class="alert alert-info">
+				<strong>Notice</strong>
+				<p>If you already have a registration no. please click on Old Patient</p>
+			</div>
+		</div>
+	</div>
+</div>

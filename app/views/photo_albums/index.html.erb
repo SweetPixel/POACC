@@ -1,0 +1,24 @@
+<% content_for :title do %>
+  <%= (@photo_gallery ? @photo_gallery.title : 'Photo Albums') %> | <%= Spud::Core.site_name %>
+<% end %>
+
+<% content_for :head do %>
+  
+<% end %>
+
+<h2><%= (@photo_gallery ? "Photo Gallery: #{@photo_gallery.title}" : 'Photo Albums') %></h2>
+
+<% if Spud::Photos.galleries_enabled %>
+  <p><%= link_to 'Back to Galleries', photo_galleries_path %></p>
+<% end %>
+
+<div id="spud_photo_albums">
+  <% @photo_albums.each do |album| %>
+    <div class="spud_photo_album_thumbnail">
+      <h3>
+        <%= link_to album.title, (@photo_gallery ? photo_gallery_photo_album_path(@photo_gallery.url_name, album.url_name) : photo_album_path(album.url_name)) %>
+      </h3>
+      <%= image_tag album.top_photo_url(:medium), :title => album.title %>
+    </div>
+  <% end %>
+</div>

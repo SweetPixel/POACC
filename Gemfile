@@ -12,15 +12,29 @@ group :development do
 	gem 'sqlite3'
 end
 
+gem 'bootstrap-timepicker-rails'
+
+gem 'bootstrap-datepicker-rails'
+
+
 # enable protected attributes
 gem 'protected_attributes'
+
+# gem 'appointments'
 
 # use postgresql for production
 group :production do
 	gem 'pg'
 end
 
+
 gem 'paperclip'
+
+
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
+gem 'rails-observers'
+gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
 
 
 # Rails Admin gem for admin interface of things
@@ -28,6 +42,8 @@ gem 'rails_admin'
 
 # Backbone js for the admin module
 gem 'rails-backbone'
+
+gem 'rubylight'
 
 # Devise gem for the 
 gem 'devise'
@@ -50,6 +66,13 @@ gem 'twitter-bootstrap-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails'
+
+gem 'simple_form'
+
+
+gem 'newrelic_rpm'
+
 #img holder for prototyping
 gem 'holder_rails'
 
@@ -68,10 +91,10 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'capistrano'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

@@ -1,10 +1,27 @@
 class DeviseCreateAdmins < ActiveRecord::Migration
   def self.up
     create_table(:admins) do |t|
-      t.database_authenticatable :null => false
-      t.recoverable
-      t.rememberable
-      t.trackable
+      # Database authenticatable
+      t.string :email,  :null => false, :default => ""
+      t.string :encrypted_password, :null => false, :default => ""
+
+      # Recoverable
+      t.string  :reset_password_token
+      t.datetime :remember_created_at
+
+
+      # Trackable
+      t.integer :sign_in_count, :default => 0
+      t.datetime :current_sign_in_at
+      t.datetime :last_sign_in_at
+      t.string :current_sign_in_ip
+      t.string :last_sign_in_ip
+
+
+      # t.database_authenticatable :null => false
+      # t.recoverable
+      # t.rememberable
+      # t.trackable
 
       # t.encryptable
       # t.confirmable

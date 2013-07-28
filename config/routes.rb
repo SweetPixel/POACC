@@ -1,6 +1,20 @@
 POACC::Application.routes.draw do
+  # resources :appointments
 
   get "orthpaedics/index"
+  
+  get "appointments/index"
+  get "appointments/new_patient"
+  get "appointments/old_patient"
+  get "appointments/booked"
+  get "appointments/not_booked"
+
+  post "appointments/createold"
+
+  post "appointments/create"
+
+
+  get "patients/old"
 
   resources :followups
 
@@ -30,6 +44,11 @@ POACC::Application.routes.draw do
   get "home/charityprojects"
   get "home/fellowships"
   get "home/jobs"
+  get "home/ourlinks"
+  get "home/faqs"
+  get "home/densitometryfellowship"
+  get "home/bdcourse"
+  get "home/trainingcurriculum"
   root "home#index"
 
   
