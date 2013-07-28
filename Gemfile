@@ -20,6 +20,8 @@ gem 'bootstrap-datepicker-rails'
 # enable protected attributes
 gem 'protected_attributes'
 
+gem 'social-share-button'
+
 # gem 'appointments'
 
 # use postgresql for production
