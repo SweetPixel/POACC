@@ -73,6 +73,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    colorbox-rails (0.1.0)
+      jquery-rails
+      rails (>= 3.1.1)
     devise (3.0.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -254,6 +257,7 @@ DEPENDENCIES
   bootstrap-timepicker-rails
   capistrano
   coffee-rails (~> 4.0.0)
+  colorbox-rails
   devise
   execjs
   holder_rails

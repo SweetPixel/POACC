@@ -1489,7 +1489,7 @@ ul.icons {
     font-size: 12px;
     font-weight: normal;
     height: 27px;
-    background: #ffffff url('../img/menu_icons.png') scroll center 23px no-repeat;
+    background: #ffffff url('/assets/menu_icons.png') scroll center 23px no-repeat;
 }
 .navbar .nav > li.single a i {
     background: none;

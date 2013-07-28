@@ -17,6 +17,8 @@ gem 'bootstrap-timepicker-rails'
 gem 'bootstrap-datepicker-rails'
 
 
+gem 'colorbox-rails'
+
 # enable protected attributes
 gem 'protected_attributes'
 
