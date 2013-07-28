@@ -1305,52 +1305,52 @@ ul.socials li {
     height: 24px;
 }
 .socials .flickr {
-    background: transparent url('../img/socials_icons.png') top left no-repeat;
+    background: transparent url('/assets/socials_icons.png') top left no-repeat;
 }
 .socials .twitter {
-    background: transparent url('../img/socials_icons.png') scroll -30px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -30px 0 no-repeat;
 }
 .socials .facebook {
-    background: transparent url('../img/socials_icons.png') scroll -60px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -60px 0 no-repeat;
 }
 .socials .youtube {
-    background: transparent url('../img/socials_icons.png') scroll -90px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -90px 0 no-repeat;
 }
 .socials .dribbble {
-    background: transparent url('../img/socials_icons.png') scroll -120px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -120px 0 no-repeat;
 }
 .socials .pinterest {
-    background: transparent url('../img/socials_icons.png') scroll -150px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -150px 0 no-repeat;
 }
 .socials .flickr:hover {
-    background: transparent url('../img/socials_icons.png') scroll 0 -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll 0 -24px no-repeat;
 }
 .socials .twitter:hover {
-    background: transparent url('../img/socials_icons.png') scroll -30px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -30px -24px no-repeat;
 }
 .socials .facebook:hover {
-    background: transparent url('../img/socials_icons.png') scroll -60px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -60px -24px no-repeat;
 }
 .socials .youtube:hover {
-    background: transparent url('../img/socials_icons.png') scroll -90px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -90px -24px no-repeat;
 }
 .socials .dribbble:hover {
-    background: transparent url('../img/socials_icons.png') scroll -120px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -120px -24px no-repeat;
 }
 .socials .pinterest:hover {
-    background: transparent url('../img/socials_icons.png') scroll -150px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -150px -24px no-repeat;
 }
 .socials .linkedin {
-    background: transparent url('../img/socials_icons.png') scroll -180px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -180px 0 no-repeat;
 }
 .socials .linkedin:hover {
-    background: transparent url('../img/socials_icons.png') scroll -180px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -180px -24px no-repeat;
 }
 .socials .google_plus {
-    background: transparent url('../img/socials_icons.png') scroll -210px 0 no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -210px 0 no-repeat;
 }
 .socials .google_plus:hover {
-    background: transparent url('../img/socials_icons.png') scroll -210px -24px no-repeat;
+    background: transparent url('/assets/socials_icons.png') scroll -210px -24px no-repeat;
 }
 ul.icons {
     list-style: none;

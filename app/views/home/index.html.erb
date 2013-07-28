@@ -6,29 +6,53 @@
 			http://twitter.github.com/bootstrap/javascript.html#carousel -->
 			<div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
 				<div class="carousel-inner">
-					<div class="item active"><!-- class of active since it's the first item -->
-						<%= image_tag("slider01.jpg") %>
+<!-- 					<div class="item active">
+						<%#= image_tag("slider01.jpg") %>
 						<div class="carousel-caption">
 							<p>Caption text here</p>
 						</div>
-					</div>
-					<div class="item">
+					</div> -->
+					<div class="item active">
 						<%= image_tag("slider02.jpg") %>
-						<div class="carousel-caption">
+<!-- 						<div class="carousel-caption">
 							<p>Caption text here</p>
-						</div>
+						</div> -->
 					</div>
 					<div class="item">
 						<%= image_tag("slider03.jpg") %>
-						<div class="carousel-caption">
+<!-- 						<div class="carousel-caption">
 							<p>Caption text here</p>
-						</div>
+						</div> -->
 					</div>
 					<div class="item">
 						<%= image_tag("slider04.jpg") %>
-						<div class="carousel-caption">
+<!-- 						<div class="carousel-caption">
 							<p>Caption text here</p>
-						</div>
+						</div> -->
+					</div>
+					<div class="item">
+						<%= image_tag("slider05.jpg") %>
+<!-- 						<div class="carousel-caption">
+							<p>Caption text here</p>
+						</div> -->
+					</div>
+					<div class="item">
+						<%= image_tag("slider06.jpg") %>
+<!-- 						<div class="carousel-caption">
+							<p>Caption text here</p>
+						</div> -->
+					</div>
+					<div class="item">
+						<%= image_tag("slider07.jpg") %>
+<!-- 						<div class="carousel-caption">
+							<p>Caption text here</p>
+						</div> -->
+					</div>
+					<div class="item">
+						<%= image_tag("slider08.jpg") %>
+<!-- 						<div class="carousel-caption">
+							<p>Caption text here</p>
+						</div> -->
 					</div>
 				</div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
@@ -59,7 +83,7 @@
 				<div class="span5 home-block">
 					<div class="grey-box hero-block-2">
 						<h2><%= link_to "Request an appointment",:controller => "appointments", :action => "index" %></h2>
-						<p><img alt="" src="img/release_icon.png" />Request an appointment with us today!</p>
+						<p>Request an appointment with us today!</p>
 						<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-warning" %>
 					</div>
 				</div>
@@ -73,48 +97,52 @@
 			<div class="row show-grid hero-list">
 				<div class="span3">
 					<div class="image-wrapper">
-						<div class="img"><img alt="" src="img/ruler.png" /></div>
+						<div class="img">
+							<%= image_tag ("ruler.png") %>
+						</div>
 					</div>
 					<div class="image-text">
-						<h2>Feature 1</h2>
-						<p>description.
-							<a href="index.html#">Learn more&nbsp;&raquo;</a>
+						<h2>Post Polio Paralysis</h2>
+						<p>The only comprehensive body in pakistan providing full rehabilitation post polio paralysis patients.
 						</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="span3">
 					<div class="image-wrapper">
-						<div class="img"><img alt="" src="img/equaliser.png" /></div>
+						<div class="img">
+							<%= image_tag ("equaliser.png") %>
+						</div>
 					</div>
 					<div class="image-text">
-						<h2>Feature 2</h2>
-						<p>description.
-							<a href="index.html#">Learn more&nbsp;&raquo;</a>
+						<h2>Limb lenghting</h2>
+						<p>The only facility providing comprehnsive clean approach and quality care for limb lenghting and also height increase  <a href="www.hillsclinic.com">(www.hillsclinic.com)</a> pioneer in providing densitometry services in kpk pakistan.
 						</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="span3">
 					<div class="image-wrapper">
-						<div class="img"><img alt="" src="img/direction.png" /></div>
+						<div class="img">
+							<%= image_tag ("direction.png") %>
+						</div>
 					</div>
 					<div class="image-text">
-						<h2>Feature 3</h2>
-						<p>description.
-							<a href="index.html#">Learn more&nbsp;&raquo;</a>
+						<h2>Perfection</h2>
+						<p>Pioneer in introducing and estabilishing a fully equipped and comprehensive body and organization for orthopaedic cosmotolgy where all physical orthopaedic disfigurements are dealt with perfection and aesthetics.
 						</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="span3">
 					<div class="image-wrapper">
-						<div class="img"><img alt="" src="img/both_arrows.png" /></div>
+						<div class="img">
+							<%= image_tag ("both_arrows.png") %>
+						</div>
 					</div>
 					<div class="image-text">
-						<h2>Feature 4</h2>
-						<p>description.
-							<a href="index.html#">Learn more&nbsp;&raquo;</a>
+						<h2>Medical Tourism</h2>
+						<p>The only facilty in kpk pakistan recieving international patients and providing them with medical tourism.
 						</p>
 					</div>
 					<div class="clear"></div>
@@ -187,13 +215,13 @@
 					<div class="row show-grid">
 						<div class="span9">
 							<div class="hero-content-3">
-								<h2>Important Announcement!</h2>
-								<p>You can post announcment like.</p>
+								<h2>Book an Appointment Today!</h2>
+								<p>Its very easy to book an appointment with us whether you are an existing or new patient.</p>
 							</div>
 						</div>
 						<div class="span3">
 							<div class="tour-btn">
-								<a href="index.html#" class="btn btn-warning">Read more!</a>
+								<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-warning" %>
 							</div>
 						</div>
 					</div>
