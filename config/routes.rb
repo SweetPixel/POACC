@@ -13,8 +13,11 @@ POACC::Application.routes.draw do
 
   post "appointments/create"
 
-
   get "patients/old"
+
+  get "practices/index"
+
+  get "staffs/index"
 
   resources :followups
 
@@ -22,12 +25,12 @@ POACC::Application.routes.draw do
 
   resources :patients
 
-  resources :staffs
+  # resources :staffs
 
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get "admin/index"
-  resources :practices
+  # resources :practices
 
   resources :contact 
 

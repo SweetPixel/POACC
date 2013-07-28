@@ -11,6 +11,8 @@
  *= require_self
  *= require jquery.ui.all
  *= require lightbox
+ *= require colorbox-rails
+ *= require social-share-button
  *= require_tree .
  */
 

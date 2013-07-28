@@ -15,7 +15,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require lightbox
+//= require colorbox-rails
 //= require holder
+//= require social-share-button
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync
