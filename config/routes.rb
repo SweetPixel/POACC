@@ -29,6 +29,7 @@ POACC::Application.routes.draw do
   get "home/bonehealthdetail"
   get "home/charityprojects"
   get "home/fellowships"
+  get "home/jobs"
   root "home#index"
 
   
