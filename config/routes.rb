@@ -25,6 +25,8 @@ POACC::Application.routes.draw do
 
   resources :patients
 
+  resources :appointments
+
   # resources :staffs
 
   devise_for :admins

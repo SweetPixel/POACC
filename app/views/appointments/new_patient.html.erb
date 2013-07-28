@@ -2,15 +2,12 @@
 	<div class="page-header">
 		<h1>Request date and time of appointment <small>We will contact you for confirmation</small></h1>
 	</div>
-	<%= simple_form_for @appointment, :url => { :action => "create" } do |a| %>
-	<label class="label">Select Date</label>
-	<br />
-	<%= a.date_select :day %>
-	<br />
-	<label class="label">Select Time</label>
-	<br />
-	<%= a.time_select :requested_time %>
-	<br />
-	<%= a.button :submit, :class => 'btn btn-primary', :value => "Request Appointment" %>
+	<%= form_tag("/appointments/create",method: "post") do %>
+		<%= label_tag(:request_date, "Select Date") %>
+		<%= select_date Date.today, prefix: :request_date %>
+		<%= label_tag(:request_time , "Select Time") %>
+		<%= select_time Time.now, prefix: :request_time %>
+		<br />
+		<%= submit_tag("Request Appointment") %>
 	<% end %>
 </div>
