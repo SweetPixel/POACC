@@ -50,7 +50,7 @@ force-stop)
   echo >&2 "Not running"
   ;;
 restart|reload)
-  sig HUP && echo reloaded OK && exit 0
+  sig USR2 && sleep 5 && oldsig QUIT && echo "Killing old master" `cat $OLD_PIN` && exit 0
   echo >&2 "Couldn't reload, starting '$CMD' instead"
   run "$CMD"
   ;;

@@ -35,11 +35,11 @@ class AppointmentsController < ApplicationController
 		 #lets get the patient first
 		 patient = Patient.all.find_by_reg_no(session[:reg_no])
 		 #now lets book the appontment
-		 @appointment = Appointment.new
-		 @appointment.day = Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
-		 @appointment.requested_time = params[:requested_time]
-		 @appointment.patient_id = patient.id
-		 if @appointment.save
+		 appointment = Appointment.new
+		 appointment.day = Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
+		 appointment.requested_time = params[:requested_time]
+		 appointment.patient_id = patient.id
+		 if appointment.save
 		 	redirect_to controller: "appointments", action: "booked"
 		 end
 		end
