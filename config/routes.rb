@@ -54,6 +54,9 @@ POACC::Application.routes.draw do
   get "home/densitometryfellowship"
   get "home/bdcourse"
   get "home/trainingcurriculum"
+  get "home/cosmotology"
+  get "home/correctingtoes"
+  get "home/heightincrease"
   root "home#index"
 
   
