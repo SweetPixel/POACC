@@ -22,8 +22,8 @@ class AppointmentsController < ApplicationController
 			redirect_to controller => "appointments", :action => "not_booked"
 		else
 			appointment = Appointment.new
-			appointment.day = Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
-			appointment.requested_time = params[:requested_time]
+			appointment.day = params[:request_date] #Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
+			appointment.requested_time = params[:request_time]
 			appointment.patient_id = patient.id
 			if appointment.save
 				redirect_to controller: "appointments", action: "booked"
@@ -36,7 +36,7 @@ class AppointmentsController < ApplicationController
 		 patient = Patient.all.find_by_reg_no(session[:reg_no])
 		 #now lets book the appontment
 		 appointment = Appointment.new
-		 appointment.day = Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
+		 appointment.day = params[:request_date] #Date.civil(params[:request_date ][:year].to_i, params[:request_date ][:month].to_i, params[:request_date ][:day].to_i)
 		 appointment.requested_time = params[:requested_time]
 		 appointment.patient_id = patient.id
 		 if appointment.save

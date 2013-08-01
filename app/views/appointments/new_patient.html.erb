@@ -4,10 +4,12 @@
 	</div>
 	<%= form_tag("/appointments/create",method: "post") do %>
 		<%= label_tag(:request_date, "Select Date") %>
-		<%= select_date Date.today, prefix: :request_date %>
+		<input type="text" data-behaviour='datepicker' name="request_date"/>
+		<%#= select_date Date.today, prefix: :request_date %>
 		<%= label_tag(:request_time , "Select Time") %>
 		<%= select_time Time.now, prefix: :request_time %>
 		<br />
-		<%= submit_tag("Request Appointment") %>
+		<%#= submit_tag("Request Appointment") %>
+		<input type="submit" value="Request Appointment" class="btn btn-primary"/>
 	<% end %>
 </div>

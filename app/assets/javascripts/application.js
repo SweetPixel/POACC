@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require lightbox
 //= require colorbox-rails
+//= require bootstrap-datepicker
+//= require bootstrap-timepicker
 //= require holder
 //= require social-share-button
 //= require underscore
@@ -24,3 +26,8 @@
 //= require backbone_datalink
 //= require backbone/poacc
 //= require_tree .
+
+
+
+  $('[data-behaviour~=datepicker]').datepicker();
+  $('#timepicker').timepicker();

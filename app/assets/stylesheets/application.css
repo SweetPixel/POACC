@@ -12,6 +12,8 @@
  *= require jquery.ui.all
  *= require lightbox
  *= require colorbox-rails
+ *= require bootstrap-datepicker
+ *= require bootstrap-timepicker
  *= require social-share-button
  *= require_tree .
  */
