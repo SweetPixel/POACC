@@ -56,7 +56,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['spud_admin_permission', 'spud_photo','spud_photo_album','spud_photo_albums_photo','spud_photo_galleries_album','spud_photo_gallery','spud_user','spud_user_setting']
 
   # Include specific models (exclude the others):
-  config.included_models = ['Admin','Appointment', 'Practice','Assessment','Followup','Patient','Staff','PatientNumbers']
+  config.included_models = ['Admin','Appointment', 'Practice','Assessment','Followup','Patient','Staff','PatientNumbers','Faq','FaqCategory']
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]

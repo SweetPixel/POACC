@@ -50,13 +50,14 @@ POACC::Application.routes.draw do
   get "home/fellowships"
   get "home/jobs"
   get "home/ourlinks"
-  get "home/faqs"
+  # get "home/faqs"
   get "home/densitometryfellowship"
   get "home/bdcourse"
   get "home/trainingcurriculum"
   get "home/cosmotology"
   get "home/correctingtoes"
   get "home/heightincrease"
+  get "home/faq"
   root "home#index"
 
   

@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="page-header">
+		<h1>Frequently Asked Questions</h1>
+	</div>
+	<div class="span9">
+		<div class="tabbable tabs-left">
+			<ul class="nav nav-tabs">
+				<% @faq_categories.each do |category| %>
+				<li>
+					<a href="#<%= category.title.delete(' ') %>" data-toggle="tab"><%= category.title %></a>
+				</li>
+				<% end %>
+			</ul>
+			<div class="tab-content">
+				<% @faq_categories.each do |c| %>
+				<div class="tab-pane" id="<%= c.title.delete(' ') %>">
+					<% c.faqs.each do |faq| %>
+					<p><strong><%= faq.question %></strong></p>
+					<p><%= faq.answer %></p>
+					<% end %>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

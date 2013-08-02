@@ -10,4 +10,8 @@ class HomeController < ApplicationController
 
   def staff
   end
+
+  def faq
+  	@faq_categories = FaqCategory.all
+  end
 end
