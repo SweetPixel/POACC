@@ -47,8 +47,7 @@
 					</ul>
 				</div>
 			</div>
-			<!-- HEADER: PRIMARY SITE NAVIGATION -->
-			<div class="container">
+ <!-- 			<div class="container">
 				<div class="navbar">
 					<div class="navbar-inner">
 						<ul class="nav">
@@ -98,9 +97,18 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
+</div>
+<div class="container">
+	<!-- HEADER: PRIMARY SITE NAVIGATION -->
+	<%= nav_bar :responsive => true do  %>
+	<%= menu_group do %>
+	<%= menu_item "HOME", root_path %>
+	<%= menu_item "ABOUT", "/home/about" %>
+	<% end %>
+	<% end %>
 </div>
 </header>
 <!-- MAIN CONTENT AREA -->
