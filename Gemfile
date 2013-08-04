@@ -32,7 +32,7 @@ group :production do
 end
 
 
-gem 'paperclip'
+gem 'paperclip', "3.4.2"
 
 
 gem 'actionpack-action_caching'

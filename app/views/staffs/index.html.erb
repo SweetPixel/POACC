@@ -9,7 +9,7 @@
 			<h4><%= s.title %></h4>
 			<div class="photo">
 				<div class="bordered-img">
-					<%= holder_tag "330x210" %>
+					<%= image_tag s.picture.url(:medium) %>
 				</div>
 			</div>
 			<p><%= s.biography %></p>
