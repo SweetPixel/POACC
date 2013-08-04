@@ -34,6 +34,7 @@ end
 
 gem 'paperclip', "3.4.2"
 
+gem 'gmaps4rails'
 
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'

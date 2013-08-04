@@ -20,6 +20,8 @@
 //= require bootstrap-timepicker
 //= require holder
 //= require social-share-button
+//= gmaps4rails.base
+//= gmaps4rails.googlemaps
 //= require underscore
 //= require backbone
 //= require backbone_rails_sync

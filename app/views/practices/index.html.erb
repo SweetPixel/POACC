@@ -7,13 +7,11 @@
 		<div class="span3 team-member">
 			<h2><%= p.name %></h2>
 			<h4><%= p.location %></h4>
-			<div class="photo">
-				<div class="bordered-img">
-					<%= holder_tag "330x210" %>
-				</div>
-			</div>
 			<p><%= p.description %></p>
 		</div>
 		<% end %>
+	</div>
+		<div class="row">
+		<%= gmaps4rails(@json) %>
 	</div>
 </div>
