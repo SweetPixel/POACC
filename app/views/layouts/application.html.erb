@@ -106,7 +106,29 @@
 	<%= nav_bar :responsive => true do  %>
 	<%= menu_group do %>
 	<%= menu_item "HOME", root_path %>
-	<%= menu_item "ABOUT", "/home/about" %>
+	<%= drop_down "ABOUT" do %>
+	<%= menu_item "ABOUT US", "/home/about" %>
+	<%= menu_item "OUR TEAM", "/staffs/index" %>
+	<%= menu_item "PRACTICES", "/practices/index" %>
+	<% end %>
+	<%= drop_down "COSMETOLOGY" do %>
+			<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
+			<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
+	<% end %>
+	<%= drop_down "TREATMENTS" do %>
+			<%= menu_item "TRAUMA", "/home/trauma" %>
+			<%= menu_item "WOUND CARE", "/home/woundcare" %>
+			<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
+	<% end %>
+	<%= menu_item "PHOTO GALLERY", "/photos" %>
+	<%= drop_down "GET CONNECTED" do %>
+		<%= menu_item "CONTACT", "/home/contact" %>
+		<%= menu_item "OUR LINKS", "/home/ourlinks" %>
+		<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
+		<%= menu_item "JOBS", "/home/jobs" %>
+		<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
+				<%= menu_item "FAQs", "/home/faq" %>
+		<% end %>
 	<% end %>
 	<% end %>
 </div>
@@ -121,8 +143,8 @@
 	<div class="footer-wrapper">
 		<div class="container">
 			<div class="row show-grid">
-				<div class="span9">
-					<div class="row show-grid">
+				<div class="span12">
+					<div class="row show-grid main-block">
 						<!-- FOOTER: LOGO -->
 						<div class="span4">
 							<img alt="" class="footer-logo" src="/assets/poacc-logo.png" />

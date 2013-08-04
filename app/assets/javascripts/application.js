@@ -33,3 +33,18 @@
 
   $('[data-behaviour~=datepicker]').datepicker();
   $('#timepicker').timepicker();
+  	/**                     
+	 * Dropdown menu        
+	 * more information: http://twitter.github.com/bootstrap/javascript.html#dropdowns
+	 */                     
+	$('.dropdown-toggle').dropdown();
+	                        
+	// make menu open on hover
+	$(".dropdown").hover(   
+		function () {       
+			$(this).addClass("open");
+		},                  
+		function () {       
+			$(this).removeClass("open");
+		}                   
+	);
