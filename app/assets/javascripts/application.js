@@ -27,7 +27,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/poacc
-//= require selectnav
 //= require_tree .
 
 

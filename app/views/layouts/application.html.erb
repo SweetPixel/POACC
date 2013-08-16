@@ -101,38 +101,49 @@
 		</div>
 	</div>
 </div>
-<div class="container">
-	<!-- HEADER: PRIMARY SITE NAVIGATION -->
-	<%= nav_bar :responsive => true do  %>
-	<%= menu_group do %>
-	<%= menu_item "HOME", root_path %>
-	<%= drop_down "ABOUT" do %>
-	<%= menu_item "ABOUT US", "/home/about" %>
-	<%= menu_item "OUR TEAM", "/staffs/index" %>
-	<%= menu_item "PRACTICES", "/practices/index" %>
-	<% end %>
-	<%= drop_down "COSMETOLOGY" do %>
-	<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
-	<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
-	<% end %>
-	<%= drop_down "TREATMENTS" do %>
-	<%= menu_item "TRAUMA", "/home/trauma" %>
-	<%= menu_item "WOUND CARE", "/home/woundcare" %>
-	<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
-	<% end %>
-	<%= menu_item "PHOTO GALLERY", "/photos" %>
-	<%= drop_down "GET CONNECTED" do %>
-	<%= menu_item "CONTACT", "/home/contact" %>
-	<%= menu_item "OUR LINKS", "/home/ourlinks" %>
-	<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
-	<%= menu_item "JOBS", "/home/jobs" %>
-	<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
-	<%= menu_item "FAQs", "/home/faq" %>
-	<% end %>
-	<% end %>
-	<% end %>
-</div>
-<div class="container">
+<!-- <div class="container">
+	<nav class="navigationbar">
+		<ul class="nav-list">
+			<li class="nav-item"><a href="#">Home</a></li>
+			<li class="nav-item"><a href="#">About</a></li>
+			<li class="nav-item"><a href="#">Services</a></li>
+			<li class="nav-item"><a href="#">Portfolio</a></li>
+			<li class="nav-item"><a href="#">Testimonials</a></li>
+			<li class="nav-item"><a href="#">Contact</a></li>
+		</ul>
+	</nav></div> -->
+	<div class="container">
+		<!-- HEADER: PRIMARY SITE NAVIGATION -->
+		<%= nav_bar :responsive => true do  %>
+		<%= menu_group do %>
+		<%= menu_item "HOME", root_path %>
+		<%= drop_down "ABOUT" do %>
+		<%= menu_item "ABOUT US", "/home/about" %>
+		<%= menu_item "OUR TEAM", "/staffs/index" %>
+		<%= menu_item "PRACTICES", "/practices/index" %>
+		<% end %>
+		<%= drop_down "COSMETOLOGY" do %>
+		<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
+		<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
+		<% end %>
+		<%= drop_down "TREATMENTS" do %>
+		<%= menu_item "TRAUMA", "/home/trauma" %>
+		<%= menu_item "WOUND CARE", "/home/woundcare" %>
+		<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
+		<% end %>
+		<%= menu_item "PHOTO GALLERY", "/photos" %>
+		<%= drop_down "GET CONNECTED" do %>
+		<%= menu_item "CONTACT", "/home/contact" %>
+		<%= menu_item "OUR LINKS", "/home/ourlinks" %>
+		<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
+		<%= menu_item "JOBS", "/home/jobs" %>
+		<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
+		<%= menu_item "FAQs", "/home/faq" %>
+		<% end %>
+		<% end %>
+		<% end %>
+	</div>
+	<!-- <div class="container"> -->
 </header>
 <!-- MAIN CONTENT AREA -->
 <div class="main-content">
@@ -232,7 +243,40 @@
 			</div>
 		</div>
 	</div>
-	<script src="selectnav.min.js"></script>
-	<script>selectnav('nav'); </script>
+	<script>
+// 	(function () {
+
+//     // Create mobile element
+//     var mobile = document.createElement('div');
+//     mobile.className = 'nav-mobile';
+//     document.querySelector('.navigationbar').appendChild(mobile);
+
+//     // hasClass
+//     function hasClass(elem, className) {
+//     	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+//     }
+
+//     // toggleClass
+//     function toggleClass(elem, className) {
+//     	var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+//     	if (hasClass(elem, className)) {
+//     		while (newClass.indexOf(' ' + className + ' ') >= 0) {
+//     			newClass = newClass.replace(' ' + className + ' ', ' ');
+//     		}
+//     		elem.className = newClass.replace(/^\s+|\s+$/g, '');
+//     	} else {
+//     		elem.className += ' ' + className;
+//     	}
+//     }
+
+//     // Mobile nav function
+//     var mobileNav = document.querySelector('.nav-mobile');
+//     var toggle = document.querySelector('.nav-list');
+//     mobileNav.onclick = function () {
+//     	toggleClass(this, 'nav-mobile-open');
+//     	toggleClass(toggle, 'nav-active');
+//     };
+// })();
+</script>
 </body>
 </html>
