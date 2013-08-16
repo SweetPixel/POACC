@@ -10,7 +10,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!--  revolution slider plugin : begin --> 
-	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />
 	<%= csrf_meta_tags %>
 	<%= yield :scripts %>
@@ -112,26 +112,27 @@
 	<%= menu_item "PRACTICES", "/practices/index" %>
 	<% end %>
 	<%= drop_down "COSMETOLOGY" do %>
-			<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
-			<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
+	<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
+	<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
 	<% end %>
 	<%= drop_down "TREATMENTS" do %>
-			<%= menu_item "TRAUMA", "/home/trauma" %>
-			<%= menu_item "WOUND CARE", "/home/woundcare" %>
-			<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
+	<%= menu_item "TRAUMA", "/home/trauma" %>
+	<%= menu_item "WOUND CARE", "/home/woundcare" %>
+	<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
 	<% end %>
 	<%= menu_item "PHOTO GALLERY", "/photos" %>
 	<%= drop_down "GET CONNECTED" do %>
-		<%= menu_item "CONTACT", "/home/contact" %>
-		<%= menu_item "OUR LINKS", "/home/ourlinks" %>
-		<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
-		<%= menu_item "JOBS", "/home/jobs" %>
-		<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
-				<%= menu_item "FAQs", "/home/faq" %>
-		<% end %>
+	<%= menu_item "CONTACT", "/home/contact" %>
+	<%= menu_item "OUR LINKS", "/home/ourlinks" %>
+	<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
+	<%= menu_item "JOBS", "/home/jobs" %>
+	<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
+	<%= menu_item "FAQs", "/home/faq" %>
+	<% end %>
 	<% end %>
 	<% end %>
 </div>
+<div class="container">
 </header>
 <!-- MAIN CONTENT AREA -->
 <div class="main-content">
@@ -231,5 +232,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="selectnav.min.js"></script>
+	<script>selectnav('nav'); </script>
 </body>
 </html>

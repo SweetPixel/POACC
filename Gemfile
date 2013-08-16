@@ -43,7 +43,7 @@ gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
 
 
 # Rails Admin gem for admin interface of things
-gem 'rails_admin'
+gem "rails_admin", :github => "sferik/rails_admin"
 
 # Backbone js for the admin module
 gem 'rails-backbone'
