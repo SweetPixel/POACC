@@ -1,4 +1,4 @@
-	<div class="container">
+	<div class="container main-block">
 		<!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) -->
 		<div class="bannercontainer" >
 			<!--  Image Carousel here  -->
@@ -12,20 +12,14 @@
 							<p>Caption text here</p>
 						</div>
 					</div> -->
+					<div class="item">
+						<%= image_tag("slider09.png") %>
+<!-- 						<div class="carousel-caption">
+							<p>Caption text here</p>
+						</div> -->
+					</div>
 					<div class="item active">
-						<%= image_tag("slider02.jpg") %>
-<!-- 						<div class="carousel-caption">
-							<p>Caption text here</p>
-						</div> -->
-					</div>
-					<div class="item">
-						<%= image_tag("slider03.jpg") %>
-<!-- 						<div class="carousel-caption">
-							<p>Caption text here</p>
-						</div> -->
-					</div>
-					<div class="item">
-						<%= image_tag("slider04.jpg") %>
+						<%= image_tag("slider10.png") %>
 <!-- 						<div class="carousel-caption">
 							<p>Caption text here</p>
 						</div> -->
@@ -84,7 +78,7 @@
 					<div class="grey-box hero-block-2">
 						<h2><%= link_to "Request an appointment",:controller => "appointments", :action => "index" %></h2>
 						<p>Request an appointment with us today!</p>
-						<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-warning" %>
+						<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-danger" %>
 					</div>
 				</div>
 			</div>
@@ -221,7 +215,7 @@
 						</div>
 						<div class="span3">
 							<div class="tour-btn">
-								<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-warning" %>
+								<%= link_to "Book now", {:controller => "appointments", :action => "index"}, :class => "btn btn-danger" %>
 							</div>
 						</div>
 					</div>
