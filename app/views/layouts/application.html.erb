@@ -9,8 +9,8 @@
 	<!--  SEO STUFF END -->
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--  revolution slider plugin : begin --> 
-	<%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
+	<!--  revolution slider plugin : begin -->
+	<%= stylesheet_link_tag  "application", media: "all" %>
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />
 	<%= csrf_meta_tags %>
 	<%= yield :scripts %>
@@ -20,131 +20,61 @@
 		<!-- THE LINE AT THE VERY TOP OF THE PAGE -->
 		<div class="top_line"></div>
 		<!-- HEADER AREA -->
-		<header>
+		<div class="container">
+			<%= nav_bar :fixed => :top, :brand => "POACC", :responsive => true do  %>
+			<%= menu_group do %>
+			<%= menu_item "HOME", root_path %>
+			<%= drop_down "ABOUT" do %>
+			<%= menu_item "ABOUT US", "/home/about" %>
+			<%= menu_item "OUR TEAM", "/staffs/index" %>
+			<%= menu_item "PRACTICES", "/practices/index" %>
+			<% end %>
+			<%= drop_down "COSMETOLOGY" do %>
+			<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
+			<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
+			<% end %>
+			<%= drop_down "TREATMENTS" do %>
+			<%= menu_item "TRAUMA", "/home/trauma" %>
+			<%= menu_item "WOUND CARE", "/home/woundcare" %>
+			<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
+			<% end %>
+			<%= menu_item "PHOTO GALLERY", "/photos" %>
+			<%= drop_down "GET CONNECTED" do %>
+			<%= menu_item "OUR LINKS", "/home/ourlinks" %>
+			<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
+			<%= menu_item "JOBS", "/home/jobs" %>
+			<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
+			<%= menu_item "FAQs", "/home/faq" %>
+			<% end %>
+			<%= menu_item "CONTACT", "/home/contact" %>
+			<% end %>
+			<% end %>
+		</div>
+<!-- 		<header>
 			<div class="container">
 				<div class="row">
-					<!-- HEADER: LOGO AREA -->
 					<div class="span4 logo">
 						<a class="logo" href="index.html">
-							<%= image_tag("poacc-logo.png", width: "236px", height: "72px") %>
+							<%#= image_tag("poacc-logo.png", width: "236px", height: "72px") %>
 						</a>
 					</div>
 					<div class="span4 offset4">
-						<!-- HEADER: PHONE NUMBER -->
 						<p class="head_phone"><a href="tel:+923339113796">+923339113796</a></p>
 						<p class="head_phone"><a href="tel:+923015943329">+923015943329</a></p>
 					</div>
-					<!-- HEADER: SOCIAL ICONS -->
 					<ul class="socials unstyled">
-						<!-- <li><a class="flickr" href="index.html#"></a></li> -->
 						<li><a class="twitter" href="index.html#"></a></li>
 						<li><a class="facebook" href="index.html#"></a></li>
 						<li><a class="youtube" href="index.html#"></a></li>
-						<!-- <li><a class="dribbble" href="index.html#"></a></li> -->
-						<!-- <li><a class="pinterest" href="index.html#"></a></li> -->
 						<li><a class="linkedin" href="index.html#"></a></li>
 						<li><a class="google_plus" href="index.html#"></a></li>
 					</ul>
 				</div>
 			</div>
- <!-- 			<div class="container">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-							<li><a href="/home/index">HOME</a></li>
-							<li><a href="/home/about">ABOUT US</a></li>
-							<li class="single">
-								<a href="/staffs/index">OUR TEAM<i>Staff Service</i>
-								</a>
-							</li>
-							<li><a href="/practices/index">PRACTICES</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="/home/cosmotology">COSMOTOLOGY<i></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="/home/correctingtoes">CORRECTING TOES</a></li>
-									<li><a href="/home/heightincrease">INCREASING HEIGHT</a></li>
-								</ul>
-							</li>
-
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-									TREATMENTS<i></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="/home/trauma">Trauma</a></li>
-									<li><a href="/home/woundcare">Wound Care</a></li>
-									<li><a href="/home/bonehealth">Bone Health Center</a></li>
-								</ul>
-							</li>
-							<li><a href="/photos">PHOTO GALLERY</a></li>
-
-							<li><a href="/home/bonehealth">BONE HEALTH CENTER</a></li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-									GET CONNECTED<i></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="/home/contact">CONTACT</a></li>
-									<li><a href="/home/ourlinks">OUR LINKS</a></li>
-									<li><a href="/home/fellowships">FELLOWSHIPS</a></li>
-									<li><a href="/home/jobs">JOBS</a></li>
-									<li><a href="/home/charityprojects">CHARITY PROJECTS</a></li>		
-								</ul>
-							</li>
-
-							<li><a href="/home/faq">FAQs</a></li>
-						</ul>
-					</div>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </div>
-<!-- <div class="container">
-	<nav class="navigationbar">
-		<ul class="nav-list">
-			<li class="nav-item"><a href="#">Home</a></li>
-			<li class="nav-item"><a href="#">About</a></li>
-			<li class="nav-item"><a href="#">Services</a></li>
-			<li class="nav-item"><a href="#">Portfolio</a></li>
-			<li class="nav-item"><a href="#">Testimonials</a></li>
-			<li class="nav-item"><a href="#">Contact</a></li>
-		</ul>
-	</nav></div> -->
-	<div class="container">
-		<!-- HEADER: PRIMARY SITE NAVIGATION -->
-		<%= nav_bar :responsive => true do  %>
-		<%= menu_group do %>
-		<%= menu_item "HOME", root_path %>
-		<%= drop_down "ABOUT" do %>
-		<%= menu_item "ABOUT US", "/home/about" %>
-		<%= menu_item "OUR TEAM", "/staffs/index" %>
-		<%= menu_item "PRACTICES", "/practices/index" %>
-		<% end %>
-		<%= drop_down "COSMETOLOGY" do %>
-		<%= menu_item "CORRECTING TOES", "/home/correctingtoes" %>
-		<%= menu_item "INCREASING HEIGHT", "/home/heightincrease" %>
-		<% end %>
-		<%= drop_down "TREATMENTS" do %>
-		<%= menu_item "TRAUMA", "/home/trauma" %>
-		<%= menu_item "WOUND CARE", "/home/woundcare" %>
-		<%= menu_item "BONE HEALTH", "/home/bonehealth" %>
-		<% end %>
-		<%= menu_item "PHOTO GALLERY", "/photos" %>
-		<%= drop_down "GET CONNECTED" do %>
-		<%= menu_item "CONTACT", "/home/contact" %>
-		<%= menu_item "OUR LINKS", "/home/ourlinks" %>
-		<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
-		<%= menu_item "JOBS", "/home/jobs" %>
-		<%= menu_item "CHARITY PROJECTS", "/home/charityprojects" %>
-		<%= menu_item "FAQs", "/home/faq" %>
-		<% end %>
-		<% end %>
-		<% end %>
-	</div>
-	<!-- <div class="container"> -->
-</header>
+</header> -->
 <!-- MAIN CONTENT AREA -->
 <div class="main-content">
 	<%= yield %>
@@ -155,50 +85,50 @@
 	<div class="footer-wrapper">
 		<div class="container">
 			<div class="row show-grid">
-				<div class="span12">
-					<div class="row show-grid main-block">
-						<!-- FOOTER: LOGO -->
-						<div class="span4">
-							<img alt="" class="footer-logo" src="/assets/poacc-logo.png" />
-							<!-- FOOTER: ADDRESS -->
-							<address class="address">
-								<p><i class="icon-map-marker icon-large"></i>POACC</p>
-								<p><i>&nbsp;</i>House no. 25, Street 2, N3, Phase 4</p>
-								<p><i>&nbsp;</i>Hayatabad, Peshawar</p>
-								<p><i class="icon-phone icon-large"></i>Phone:  +923339113796</p>
-								<p><i class="icon-print icon-large"></i>Fax: (0092) 91-2213192</p>
-							</address>
+				<!-- <div class="span12"> -->
+				<div class="row show-grid main-block">
+					<!-- FOOTER: LOGO -->
+					<div class="span4">
+						<!-- <img alt="" class="footer-logo" src="/assets/poacc-logo.png" /> -->
+						<!-- FOOTER: ADDRESS -->
+						<address class="address">
+							<p><i class="icon-map-marker icon-large"></i>POACC</p>
+							<p><i>&nbsp;</i>House no. 25, Street 2, N3, Phase 4</p>
+							<p><i>&nbsp;</i>Hayatabad, Peshawar</p>
+							<p><i class="icon-phone icon-large"></i>Phone:  +923339113796</p>
+							<p><i class="icon-print icon-large"></i>Fax: (0092) 91-2213192</p>
+						</address>
+					</div>
+					<!-- FOOTER: ABOUT US -->
+					<div class="span4 footer-center">
+						<h4 class="center-title">About Us</h4>
+						<p>We strive for quality care, provide best standard services and innovative methods
+							of management for complex clinical situations in trauma, orthopaedics and cosmetology. We are located at Peshawar, the ancient and well known tourist city of Pakistan. Our Head Office is at Dabgaree Gardens, Peshawar linked with satellite clinics within and around Peshawar.</p>
+							<%= social_share_button_tag("Pakistan Orthopaedic and Cosmetology Center - www.poacc.com", :url => "http://www.poacc.com") %>
 						</div>
-						<!-- FOOTER: ABOUT US -->
-						<div class="span4 footer-center">
-							<h4 class="center-title">About Us</h4>
-							<p>We strive for quality care, provide best standard services and innovative methods
-								of management for complex clinical situations in trauma, orthopaedics and cosmetology. We are located at Peshawar, the ancient and well known tourist city of Pakistan. Our Head Office is at Dabgaree Gardens, Peshawar linked with satellite clinics within and around Peshawar.</p>
-								<%= social_share_button_tag("Pakistan Orthopaedic and Cosmetology Center - www.poacc.com", :url => "http://www.poacc.com") %>
-							</div>
-							<!-- FOOTER: NAVIGATION LINKS -->
-							<div class="span4 footer-right">
-								<h4 class="center-title">Navigate</h4>
-								<ul class="footer-navigate">
-									<li>
-										<a href="">Home</a>
-									</li>
-									<li>
-										<a href="">About</a>
-									</li>
-									<li>
-										<a href="">Staff</a>
-									</li>
-									<li>
-										<a href="">Treatments</a>
-									</li>
-									<li>
-										<a href="">Contact us</a>
-									</li>
-								</ul>
-							</div>
+						<!-- FOOTER: NAVIGATION LINKS -->
+						<div class="span4 footer-right">
+							<h4 class="center-title">Navigate</h4>
+							<ul class="footer-navigate">
+								<li>
+									<a href="">Home</a>
+								</li>
+								<li>
+									<a href="">About</a>
+								</li>
+								<li>
+									<a href="">Staff</a>
+								</li>
+								<li>
+									<a href="">Treatments</a>
+								</li>
+								<li>
+									<a href="">Contact us</a>
+								</li>
+							</ul>
 						</div>
 					</div>
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
@@ -207,7 +137,7 @@
 				<div class="row show-grid">
 					<!-- FOOTER: COPYRIGHT TEXT -->
 					<div class="span12">
-						<p> Developed by <a href="http://www.sweetpixelstudios.com.com">SweetPixel Studios</a>. Copyright 2013.</p>
+						<p> Developed and maintained by <a href="http://www.sweetpixelstudios.com">SweetPixel Studios</a>. Copyright 2013.</p>
 						<hr>
 					</div>
 				</div>
@@ -215,11 +145,11 @@
 			<!-- END FOOTER -->
 		</div>
 	</div>
-	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application" %>
 	<div id="lightbox" class="lightbox">
 		<div class="lb-outerContainer">
 			<div class="lb-container">
-				<img class="lb-image" src="img/demopage/image-2.jpg">
+				<!-- <img class="lb-image" src="img/demopage/image-2.jpg"> -->
 				<div class="lb-nav" style="display: block; ">
 					<a class="lb-prev" href="" style="display: none; ">
 					</a>
@@ -244,39 +174,6 @@
 		</div>
 	</div>
 	<script>
-// 	(function () {
-
-//     // Create mobile element
-//     var mobile = document.createElement('div');
-//     mobile.className = 'nav-mobile';
-//     document.querySelector('.navigationbar').appendChild(mobile);
-
-//     // hasClass
-//     function hasClass(elem, className) {
-//     	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-//     }
-
-//     // toggleClass
-//     function toggleClass(elem, className) {
-//     	var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-//     	if (hasClass(elem, className)) {
-//     		while (newClass.indexOf(' ' + className + ' ') >= 0) {
-//     			newClass = newClass.replace(' ' + className + ' ', ' ');
-//     		}
-//     		elem.className = newClass.replace(/^\s+|\s+$/g, '');
-//     	} else {
-//     		elem.className += ' ' + className;
-//     	}
-//     }
-
-//     // Mobile nav function
-//     var mobileNav = document.querySelector('.nav-mobile');
-//     var toggle = document.querySelector('.nav-list');
-//     mobileNav.onclick = function () {
-//     	toggleClass(this, 'nav-mobile-open');
-//     	toggleClass(toggle, 'nav-active');
-//     };
-// })();
-</script>
+	</script>
 </body>
 </html>

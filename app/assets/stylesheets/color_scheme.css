@@ -15,68 +15,68 @@ a {
 /* Color that appears when user hovers over a link
 ---------------------------------------------------------------------- */
 
-a:hover {
+/*a:hover {
     color: #27ae60;
 }
-
+*/
 /* Text color of the active link in a drop down menu
 ---------------------------------------------------------------------- */
 
-.navbar .nav .open .dropdown-menu .active a {
+/*.navbar .nav .open .dropdown-menu .active a {
     color: #27ae60;
-}
+}*/
 
 /* Text color of the active link in a drop down menu when you hover over it
 ---------------------------------------------------------------------- */
 
-.navbar .nav .open .dropdown-menu .active a:hover {
+/*.navbar .nav .open .dropdown-menu .active a:hover {
     color: #27ae60;
-}
+}*/
 
 /* Text color of the active navbar item
 ---------------------------------------------------------------------- */
 
-.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active a > i, .navbar .nav .active a > i:hover {
+/*.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active a > i, .navbar .nav .active a > i:hover {
     color: #27ae60;
-}
+}*/
 
 /* Primary menu text color when you hover over it (does not include the sub-menu text)
 ---------------------------------------------------------------------- */
 
-.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+/*.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     color: #27ae60;
-}
+}*/
 
 /* Color of the stripe in a dropdown menu when you hover over vertical menu item
 ---------------------------------------------------------------------- */
 
-.navbar .nav > li .dropdown-menu li a:hover {
+/*.navbar .nav > li .dropdown-menu li a:hover {
     background-color: #292929;
     background-image: none !important;
     filter: none;
-}
+}*/
 
 /* Color of the text in a dropdown menu when you hover over it
 ---------------------------------------------------------------------- */
 
-.navbar .nav > li .dropdown-menu li a:hover {
+/*.navbar .nav > li .dropdown-menu li a:hover {
     color: #27ae60;
 }
-
+*/
 /* Color of the menu bar's sub-menu text when you hover over it and the color of both the primary and sub-menu text that has no sub-nav when you hover over it
 ---------------------------------------------------------------------- */
 
-.navbar .nav > li:hover a, .navbar .nav > li:hover a i {
+/*.navbar .nav > li:hover a, .navbar .nav > li:hover a i {
     color: #27ae60;
-}
+}*/
 
 /* Color of bar above active menu item or menu item when you hover over it
 ---------------------------------------------------------------------- */
 
-.navbar .nav .active > a, .navbar .nav li:hover > a {
+/*.navbar .nav .active > a, .navbar .nav li:hover > a {
     border-top: 3px solid #27ae60;
 }
-
+*/
 /* Color of Twitter bar
 ---------------------------------------------------------------------- */
 
