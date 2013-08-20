@@ -80,5 +80,5 @@ POACC::Application.configure do
 
 
   # GA analytics
-  GA.tracker = "UA-43336332-1"
+  # GA.tracker = "UA-43336332-1"
 end
