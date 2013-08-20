@@ -78,6 +78,8 @@ gem 'simple_form'
 
 gem 'newrelic_rpm'
 
+gem 'google-analytics-rails'
+
 #img holder for prototyping
 gem 'holder_rails'
 

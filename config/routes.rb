@@ -13,6 +13,8 @@ POACC::Application.routes.draw do
 
   post "appointments/create"
 
+  post "contact/feedback"
+
   get "patients/old"
 
   get "practices/index"
