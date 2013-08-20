@@ -11,15 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820140245) do
+ActiveRecord::Schema.define(version: 20130820173735) do
 
   create_table "admins", force: true do |t|
-    t.string   "email",                              default: "", null: false
-    t.string   "encrypted_password",     limit: 128, default: "", null: false
+    t.string   "email",                default: "", null: false
+    t.string   "encrypted_password",   default: "", null: false
     t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0
+    t.integer  "sign_in_count",        default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -40,16 +39,45 @@ ActiveRecord::Schema.define(version: 20130820140245) do
   end
 
   create_table "assessments", force: true do |t|
-    t.text     "Complaints"
-    t.text     "Clinical"
-    t.text     "Investigation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.integer  "patient_id"
-  end
-
-  create_table "categories", force: true do |t|
-    t.text     "title"
+    t.text     "main_complaints"
+    t.text     "clinical_medical_history"
+    t.text     "investigational_medical_history"
+    t.text     "examination_bp"
+    t.text     "examination_pulse"
+    t.text     "examination_wt"
+    t.text     "examination_ht"
+    t.text     "cv"
+    t.text     "chest"
+    t.text     "git"
+    t.text     "gut"
+    t.text     "skin"
+    t.text     "neck"
+    t.text     "right_shoulder"
+    t.text     "left_shoulder"
+    t.text     "right_arm"
+    t.text     "left_arm"
+    t.text     "right_elbow"
+    t.text     "left_elbow"
+    t.text     "right_forearm"
+    t.text     "left_forearm"
+    t.text     "right_wrist"
+    t.text     "left_wrist"
+    t.text     "thoracic_spine"
+    t.text     "lumber_spine"
+    t.text     "sacrococcyx_spine"
+    t.text     "pelvis"
+    t.text     "right_hipjoint"
+    t.text     "left_hipjoint"
+    t.text     "right_thigh"
+    t.text     "left_thigh"
+    t.text     "right_knee"
+    t.text     "left_knee"
+    t.text     "right_leg"
+    t.text     "left_leg"
+    t.text     "right_ankle"
+    t.text     "left_ankle"
+    t.text     "plan"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -99,13 +127,6 @@ ActiveRecord::Schema.define(version: 20130820140245) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "reg_no"
-  end
-
-  create_table "photos", force: true do |t|
-    t.text     "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "practices", force: true do |t|
@@ -235,12 +256,6 @@ ActiveRecord::Schema.define(version: 20130820140245) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-  end
-
-  create_table "sub_categories", force: true do |t|
-    t.text     "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "testimonials", force: true do |t|
