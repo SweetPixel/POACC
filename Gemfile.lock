@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 19472150cfdd4ae082bf9665d05964cc9cd28a28
+  revision: 50ad6bd90771717108afca2fa6633b0fa2995c08
   specs:
     rails_admin (0.5.0)
       bootstrap-sass (~> 2.3)
@@ -96,7 +96,7 @@ GEM
     colorbox-rails (0.1.0)
       jquery-rails
       rails (>= 3.1.1)
-    devise (3.0.2)
+    devise (3.0.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -129,7 +129,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.0)
-    libv8 (3.11.8.17)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -224,15 +224,15 @@ GEM
       rails (>= 3.2.2)
       retina_tag
       will_paginate
-    sqlite3 (1.3.7)
-    therubyracer (0.11.4)
-      libv8 (~> 3.11.8.12)
+    sqlite3 (1.3.8)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
     tilt (1.4.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)

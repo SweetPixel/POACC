@@ -5,7 +5,7 @@
 	<div class="row">
 		<% @staff.each do |s| %>
 		<div class="span3 team-member">
-			<h2><%= s.name %></h2>
+			<h2><%= link_to s.name, s %></h2>
 			<h4><%= s.title %></h4>
 			<div class="photo">
 				<div class="bordered-img">
