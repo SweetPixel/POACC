@@ -32,3 +32,4 @@
 
   $('[data-behaviour~=datepicker]').datepicker();
   $('#timepicker').timepicker();
+

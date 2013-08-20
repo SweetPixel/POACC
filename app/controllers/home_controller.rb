@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @testimonial = Testimonial.all
   end
 
   def about
@@ -14,4 +15,5 @@ class HomeController < ApplicationController
   def faq
   	@faq_categories = FaqCategory.all
   end
+
 end
