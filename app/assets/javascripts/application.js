@@ -33,6 +33,8 @@
 
   $('[data-behaviour~=datepicker]').datepicker();
   $('#timepicker').timepicker();
+
+  $('marquee')#marquee(optionalClass);
   	/**                     
 	 * Dropdown menu        
 	 * more information: http://twitter.github.com/bootstrap/javascript.html#dropdowns

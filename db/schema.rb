@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130804121615) do
+ActiveRecord::Schema.define(version: 20130819191723) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                              default: "", null: false
@@ -232,6 +232,13 @@ ActiveRecord::Schema.define(version: 20130804121615) do
 
   create_table "sub_categories", force: true do |t|
     t.text     "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "testimonials", force: true do |t|
+    t.string   "from"
+    t.text     "testimonial_text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

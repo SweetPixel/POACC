@@ -188,17 +188,27 @@
 	<!-- MAIN CONTENT AREA: bizstrap CUSTOM - HORIZONTAL TESTIMONIAL BLOCK -->
 	<div class="main-block testimonials">
 		<div class="title-wrapper">
-			<h2>Testimonials</h2><a href="index.html#" class="all">View Testimonials&nbsp;&raquo;</a>
+			<h2>Testimonials</h2><a href="index.html#" class="all"></a>
 		</div>
 		<div class="clear-both"></div>
 		<div class="row show-grid">
 			<div class="span12">
-				<div class="testimonials-block">
-					<div class="quote"></div>
+
+				<div id = "rotate">
+					
+				    <% @testimonial.each do |t| %>
+					<div class="testimonials-block">
+						<div class="quote"></div>
+						<p class="first-row"><%= t.testimonial_text %> </p>
+						
+					<p class="autor"><i><%= t.from %></i></p></div>
+					<% end %>
+					</div>
+					<!-- <div class="quote"></div>
 					<p class="first-row">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 					<p>Cras mattis consectetur purus sit amet fermentum.</p>
 					<p></p>
-					<p class="autor">Mr.Sam , Manager</p>
+					<p class="autor">Mr.Sam , Manager</p> -->
 				</div>
 			</div>
 		</div>
@@ -225,3 +235,50 @@
 	</div>
 	<hr>
 </div>
+
+<% content_for :tsjs do %>
+<script type="text/javascript">
+
+
+
+(function($){
+    $.fn.extend({ 
+        //plugin name - rotaterator
+        rotaterator: function(options) {
+ 
+            var defaults = {
+                fadeSpeed: 600,
+                pauseSpeed: 100,
+				child:null
+            };
+             
+            var options = $.extend(defaults, options);
+         
+            return this.each(function() {
+                  var o =options;
+                  var obj = $(this);                
+                  var items = $(obj.children(), obj);
+				  items.each(function() {$(this).hide();})
+				  if(!o.child){var next = $(obj).children(':first');
+				  }else{var next = o.child;
+				  }
+				  $(next).fadeIn(o.fadeSpeed, function() {
+						$(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+							var next = $(this).next();
+							if (next.length == 0){
+									next = $(obj).children(':first');
+							}
+							$(obj).rotaterator({child : next, fadeSpeed : o.fadeSpeed, pauseSpeed : o.pauseSpeed});
+						})
+					});
+            });
+        }
+    });
+})(jQuery);
+
+ $(document).ready(function() {
+        $('#rotate').rotaterator({fadeSpeed:1200, pauseSpeed:6000});
+    }); 
+
+</script>
+<%end%>
