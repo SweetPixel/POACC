@@ -1,0 +1,25 @@
+<div class="container main-block">
+	<div class="Page Header">
+		<h1> <%=@staff.name%> </h1>
+	</div>
+	<div class="row">
+		
+		<div class="span3 team-member">
+			
+			<h4><%= @staff.title %></h4>
+			<p><%= @staff.biography %></p>
+		</div>
+
+		<div class="span6 member-details">
+			<div class="photo">
+				<div>
+					<%= image_tag @staff.picture.url(:medium) %>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+		<%= link_to 'Back', staffs_path %>
+	
+</div>
