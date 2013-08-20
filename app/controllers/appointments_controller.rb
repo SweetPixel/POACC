@@ -27,7 +27,7 @@ class AppointmentsController < ApplicationController
 			appointment.patient_id = patient.id
 			if appointment.save
 				redirect_to controller: "appointments", action: "booked"
-			end	
+			end
 		end
 	end
 

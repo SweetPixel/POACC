@@ -14,12 +14,11 @@
 ActiveRecord::Schema.define(version: 20130819191723) do
 
   create_table "admins", force: true do |t|
-    t.string   "email",                              default: "", null: false
-    t.string   "encrypted_password",     limit: 128, default: "", null: false
+    t.string   "email",                default: "", null: false
+    t.string   "encrypted_password",   default: "", null: false
     t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0
+    t.integer  "sign_in_count",        default: 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -46,12 +45,6 @@ ActiveRecord::Schema.define(version: 20130819191723) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "patient_id"
-  end
-
-  create_table "categories", force: true do |t|
-    t.text     "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "faq_categories", force: true do |t|
@@ -92,13 +85,6 @@ ActiveRecord::Schema.define(version: 20130819191723) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "reg_no"
-  end
-
-  create_table "photos", force: true do |t|
-    t.text     "title"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "practices", force: true do |t|
@@ -228,12 +214,6 @@ ActiveRecord::Schema.define(version: 20130819191723) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-  end
-
-  create_table "sub_categories", force: true do |t|
-    t.text     "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "testimonials", force: true do |t|
