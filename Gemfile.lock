@@ -19,13 +19,27 @@ GIT
       sass-rails (~> 4.0)
 
 GIT
+  remote: git@github.com:aliirz/spud_core_admin.git
+  revision: fbce8582f05cfed0c953911fae5ea3b5413d6c2a
+  specs:
+    spud_core (0.9.20)
+      authlogic
+      bootstrap-will_paginate
+      breadcrumbs_on_rails
+      codemirror-rails
+      jquery-rails
+      rails (>= 3.2.2)
+      retina_tag
+      will_paginate
+
+GIT
   remote: https://github.com/aliirz/spud_photos.git
-  revision: 85465d81a31424f45bc38d6c9843f04d4be844a4
+  revision: e937a4372c239933cc8f986764604d321a6e2fef
   specs:
     spud_photos (0.9.4)
       paperclip
       rails (>= 3.2.2)
-      spud_core (>= 0.9.0, < 1.0.0)
+      spud_core
 
 GEM
   remote: https://rubygems.org/
@@ -64,7 +78,7 @@ GEM
       activerecord (>= 3.2)
       activesupport (>= 3.2)
     bcrypt-ruby (3.1.1)
-    bootstrap-datepicker-rails (1.1.1.6)
+    bootstrap-datepicker-rails (1.1.1.7)
       railties (>= 3.0)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
@@ -103,8 +117,7 @@ GEM
       warden (~> 1.2.3)
     ejs (1.0.0)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
+    execjs (2.0.0)
     font-awesome-rails (3.2.1.3)
       railties (>= 3.2, < 5.0)
     gmaps4rails (1.5.6)
@@ -215,15 +228,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    spud_core (0.9.20)
-      authlogic
-      bootstrap-will_paginate
-      breadcrumbs_on_rails
-      codemirror-rails
-      jquery-rails
-      rails (>= 3.2.2)
-      retina_tag
-      will_paginate
     sqlite3 (1.3.8)
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
@@ -283,6 +287,7 @@ DEPENDENCIES
   sdoc
   simple_form
   social-share-button
+  spud_core!
   spud_photos!
   sqlite3
   therubyracer

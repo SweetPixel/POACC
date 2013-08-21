@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require lightbox
-//= require colorbox-rails
 //= require bootstrap-datepicker
 //= require bootstrap-timepicker
 //= require holder
