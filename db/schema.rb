@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820173735) do
+ActiveRecord::Schema.define(version: 20130821183001) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                default: "", null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20130820173735) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "appointments", force: true do |t|
-    t.string   "day"
+    t.date     "day",            limit: 255
     t.string   "requested_time"
     t.integer  "patient_id"
     t.datetime "created_at"
