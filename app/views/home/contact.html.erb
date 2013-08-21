@@ -1,69 +1,75 @@
-<!-- <div class="container main-block">
-	<h1>Contact Us</h1>
-	<p>Our team of experienced staff members is here to help you and will coordinate all aspects of care while you are here, including scheduling physician visits and clarifying procedures. We pride ourselves in servicing a national and international clientele, paying extra attention to personal, cultural, and travel-related needs. 
-		<br />
-		If you have any questions, comments, or any concerns regarding our services and fees, Please don't hesitate to contact us at anytime.  Your email will be replied within promptly. Peshawar Orthopaedic & Cosmetology Clinic also offers free consultation on every Fridays so if You want to be consulted by us, Please contact us by email, phone number or normal mail.
-		<br />
-		By Mail:
-		18/B, Khattak Medical Centre, 
-		Dabgaree Gardens, Peshawar
-		NWFP, Pakistan
-		<br />
-		By email:
-		<br />
-		traumaconsultant@yahoo.com
-		<br />
-		To see a map of our location, click here.
-		<br />
-		By Phone:
-		0092-91-2571414
-		<br />
-		0092-91-5250067
-		<br />
-		By Fax:
-		0092-91-2213192
-		<br />
-		The POACC is currently seeking participants for several research studies in osteoporosis. If you  are interested in participating in a clinical research program, please call , or email us.
-		<br />
-		Feedback on broken links or other aspects of this site may be addressed on the our email address.
-		<br />
-		You can also enter your questions along with your name and email address in the following fields and we will contact you later.
-	</p>
-</div> -->
 <div class="container main-block">
 	<div class="page-header">
 		<h1>Contact Us</h1>
 	</div>
-	<div class="span9">
-		<div class="row">
-			<span class="suc"
-		</div>
-		<form class="well">
+	<div class="row-fluid">
+		<div class="span9">
+			<!-- <div class="well"> -->
+			<%= form_tag("/contact/feedback",method: "post") do %>
 			<div class="row">
-				<div class="span3">
-					<label>First Name</label>
-					<input type="text" class="span3" placeholder="Your First Name">
-					<label>Last Name</label>
-					<input type="text" class="span3" placeholder="Your Last Name">
-					<label>Email Address</label>
-					<input type="text" class="span3" placeholder="Your email address">
-					<label>Subject</label>
-					<select id="subject" name="subject" class="span3">
-						<option value="na" selected="">Choose One:</option>
-						<option value="service">General Customer Service</option>
-						<option value="suggestions">Suggestions</option>
-						<option value="product">Product Support</option>
-					</select>
-				</div>
-				<div class="span5">
-					<label>Message</label>
-					<textarea name="message" id="message" class="input-xlarge span5" rows="10"></textarea>
-				</div>
-				<button type="submit" class="btn btn-primary pull-right">Send</button>
+				<!-- <div class="span6"> -->
+				<label>First Name</label>
+				<input type="text" class="" name="firstname" placeholder="Your First Name">
+				<label>Last Name</label>
+				<input type="text" class="" name="lastname" placeholder="Your Last Name">
+				<label>Email Address</label>
+				<input type="text" class="" name="emailaddress" placeholder="Your email address">
+				<!-- </div> -->
+				<!-- <div class="span3"> -->
+				<label>Message</label>
+				<textarea name="message" id="message" class="input-xlarge" rows="10"></textarea><br />
+				<button type="submit" class="btn btn-primary">Send</button>
+				<!-- </div> -->
 			</div>
-		</form>
-	</div>
-	<div class="span3">
-		<%= ad_unit(:square, "pub-6817444828958491") %>
+			<% end %>
+			<!-- </div> -->
+		</div>
+		<div class="span3">
+			<div class="row">
+				<div class="well">
+					<address>
+						<strong><i class="icon icon-home"></i> Rawalpindi Practice</strong><br>
+						Room 12<br>
+						Mariam Memorial Hospital<br>
+						Westridge Peshawar Road<br>
+						RawalPindi<br>
+						<a href="http://www.maryamhospital.com/find_a_doctor.php?srch_doc=khaqan+&srch_spec=Anesthesia&x=0&y=0&docsearch=on&srch_doc_what=name">Website</a><br>
+					</address>
+				</div>
+			</div>
+			<div class="row">
+				<div class="well">
+					<address>
+						<strong><i class="icon icon-home"></i> Attock Practice</strong><br>
+						Street 1<br>
+						Dar-us-Salam Colnoy<br>
+						Kamra Road, Near Shinwari Hotel<br>
+						Attock<br>
+					</address>
+				</div>
+			</div>
+			<div class="row">
+				<div class="well">
+					<address>
+						<strong><i class="icon icon-home"></i> Peshawar Deans Practice</strong><br>
+						3rd Floor<br>
+						127 Deans Trade Center<br>
+						Peshawar Cantt.<br>
+						Peshawar<br>
+					</address>
+				</div>
+			</div>
+			<div class="row">
+				<div class="well">
+					<address>
+						<strong><i class="icon icon-home"></i> Peshawar Hayatabad Practice</strong><br>
+						House no. 25, Street 2, Sector N3<br>
+						Phase 4<br>
+						Hayatabad<br>
+						Peshawar<br>
+					</address>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
