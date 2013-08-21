@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
     @testimonial = Testimonial.all
+
+    @marketing = MarketingBullet.all
   end
 
   def about

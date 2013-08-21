@@ -5,13 +5,17 @@
 	<div class="row">
 		<% @practices.each do |p| %>
 		<div class="span3 team-member">
-			<h2><%= p.name %></h2>
-			<h4><%= p.location %></h4>
-			<p><%= p.description %></p>
+			<div class="well">
+				<address>
+					<strong><i class="icon  icon-map-marker icon-large"></i> <%= p.name %></strong><br>
+					<%= p.location %><br>
+					<%= p.description %><br>
+				</address>
+			</div>
 		</div>
 		<% end %>
 	</div>
-		<div class="row">
-		<%= gmaps4rails(@json) %>
+	<div class="row">
+		<%#= gmaps4rails(@json) %>
 	</div>
 </div>
