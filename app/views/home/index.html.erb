@@ -95,20 +95,37 @@
 		<div class="span12">
 			<!-- MAIN CONTENT AREA: bizstrap CUSTOM - HERO LIST -->
 			<div class="row show-grid hero-list">
+				<% @marketing.each do |m| %>
 				<div class="span3">
 					<div class="image-wrapper">
 						<div class="img">
 							<%= image_tag ("ruler.png") %>
 						</div>
 					</div>
+					
+										
 					<div class="image-text">
-						<h2>Post Polio Paralysis</h2>
-						<p>The only comprehensive body in pakistan providing full rehabilitation post polio paralysis patients.
-						</p>
+						
+						<p><h2><%= m.title %></p></h2></p>
+						<p> <%= m.description %></p>
+						
+
+						<!--<% @testimonial.each do |t| %>
+					<div class="testimonials-block">
+						<div class="quote"></div>
+						<p class="first-row"><%= t.testimonial_text %> </p>
+						
+						<p class="autor"><i><%= t.from %></i></p></div>
+						<% end %>-->
+
+
+
+						
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div class="span3">
+				<% end %>
+				<!-- <div class="span3">
 					<div class="image-wrapper">
 						<div class="img">
 							<%= image_tag ("equaliser.png") %>
@@ -120,8 +137,8 @@
 						</p>
 					</div>
 					<div class="clear"></div>
-				</div>
-				<div class="span3">
+				</div> -->
+				<!-- <div class="span3">
 					<div class="image-wrapper">
 						<div class="img">
 							<%= image_tag ("direction.png") %>
@@ -133,8 +150,8 @@
 						</p>
 					</div>
 					<div class="clear"></div>
-				</div>
-				<div class="span3">
+				</div> -->
+				<!-- <div class="span3">
 					<div class="image-wrapper">
 						<div class="img">
 							<%= image_tag ("both_arrows.png") %>
@@ -146,7 +163,7 @@
 						</p>
 					</div>
 					<div class="clear"></div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="horizontal-divider span12"></div>

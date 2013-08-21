@@ -2,7 +2,7 @@ class CreateAssessments < ActiveRecord::Migration
     def change
 
 
-      drop_table :assessments
+      # drop_table :assessments
 
       create_table :assessments do |t|
             t.integer :patient_id
