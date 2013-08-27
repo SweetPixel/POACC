@@ -9,7 +9,7 @@
 			<h4><%= s.title %></h4>
 			<div class="photo">
 				<div>
-					<%= image_tag s.picture.url(:medium) %>
+					<%= image_tag s.picture.url(:medium), :size => '200x200', :crop => :fill %>
 				</div>
 			</div>
 			
