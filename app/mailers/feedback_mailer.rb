@@ -3,6 +3,6 @@ class FeedbackMailer < ActionMailer::Base
 
   def feedbackform(f)
   	@feedback = f
-  	mail(to: "ali@sweetpixelstudios.com", subject: "New Feedback from POACC Website")
+  	mail(to: "traumaconsultant@yahoo.com", subject: "New Feedback from POACC Website")
   end
 end
