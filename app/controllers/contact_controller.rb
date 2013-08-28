@@ -5,7 +5,6 @@ class ContactController < ApplicationController
 		f.lastname = params[:lastname]
 		f.emailaddress = params[:emailaddress]
 		f.message  = params[:message]
-		FeedbackMailer.feedbackform(f)
-		redirect_to :controller => "home", :action => "index"
+		FeedbackMailer.feedbackform(f).deliver
 	end
 end

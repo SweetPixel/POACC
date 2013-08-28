@@ -29,6 +29,8 @@
 
 
 
-  $('[data-behaviour~=datepicker]').datepicker();
+  $('[data-behaviour~=datepicker]').datepicker({
+  	format: 'yy-mm-dd'
+  });
   $('#timepicker').timepicker();
 

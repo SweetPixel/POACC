@@ -28,7 +28,7 @@ class PatientsController < ApplicationController
   # POST /patients.json
   def create
     @patient = Patient.new(patient_params)
-    if(Patient.all != nil)
+    if !Patient.find(:all).empty?
       @patient.reg_no = Patient.last.reg_no + 1 
     else
       @patient.reg_no = Patient_Number.first.start
