@@ -3,4 +3,9 @@
 		<strong>Appointment Requested Successfully</strong>
 		Your appoinment request has been successfully forwarded. We will contact you shortly.
 	</div>
+	<% if @patient_reg != nil %>
+	<div class="alert">
+		Your registration no. is <strong><%= @patient_reg %></strong>. Please remember it as it will be used for corrspondence of your future appointments.
+	</div>
+	<% end %>
 </div>

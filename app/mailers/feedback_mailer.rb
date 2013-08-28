@@ -5,4 +5,16 @@ class FeedbackMailer < ActionMailer::Base
   	@feedback = f
   	mail(to: "traumaconsultant@yahoo.com", subject: "New Feedback from POACC Website")
   end
+
+
+  def notify_appointment(a)
+  	@appointment = a
+  	mail(to: "traumaconsultant@yahoo.com", subject: "New Appointment Requested")
+  end
+
+  def send_appointment_approval(a)
+  	@appointment = a
+  	mail(to: "traumaconsultant@yahoo.com", subject: "Appointment Confirmation from POACC")
+  end
+
 end
