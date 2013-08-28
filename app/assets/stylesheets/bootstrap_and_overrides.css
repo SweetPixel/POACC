@@ -8,7 +8,11 @@
 
   .navbar-inner{
   	background-color: #18BC9C;
-  	background-image: linear-gradient(to bottom, #18BC9C, #18BC9C);
+  	background-image: linear-gradient(bottom, #18BC9C, #18BC9C);
+  	background-image: -o-linear-gradient(bottom, #18BC9C, #18BC9C);
+  	background-image: -moz-linear-gradient(bottom, #18BC9C, #18BC9C);
+  	background-image: -webkit-linear-gradient(bottom, #18BC9C, #18BC9C);
+  	background-image: -ms-linear-gradient(bottom, #18BC9C, #18BC9C);
   	background-repeat: repeat-x;
   	border-color: #15A589;
   }
