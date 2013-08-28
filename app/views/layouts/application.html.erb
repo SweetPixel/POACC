@@ -20,10 +20,11 @@
 		<!-- THE LINE AT THE VERY TOP OF THE PAGE -->
 		<div class="top_line"></div>
 		<!-- HEADER AREA -->
-		<div class="container">
+		<div class="container" id="navbar">
 			<%= nav_bar :fixed => :top, :brand => "POACC", :responsive => true do  %>
 			<%= menu_group do %>
 			<%= menu_item "HOME", root_path %>
+			<%= menu_divider %>
 			<%= drop_down "ABOUT" do %>
 			<%= menu_item "ABOUT US", "/home/about" %>
 			<%= menu_item "OUR TEAM", "/team" %>
@@ -42,6 +43,7 @@
 			<% end %>
 			<%= menu_divider %>
 			<%= menu_item "PHOTO GALLERY", "/photos" %>
+			<%= menu_divider %>
 			<%= drop_down "GET CONNECTED" do %>
 			<%= menu_item "OUR LINKS", "/home/ourlinks" %>
 			<%= menu_item "FELLOWSHIPS", "/home/fellowships" %>
