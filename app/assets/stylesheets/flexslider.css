@@ -11,20 +11,7 @@
 
  
 /* Browser Resets */
-	#cssawards {
-    left: 0;
-    position: fixed;
-    top: 0;
-    z-index: 999999;
-}
-		#cssawards a {
-    background: url("../img/onlineappointment.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    border: medium none;
-    display: block;
-    height: 130px;
-    text-indent: -8000px;
-    width: 130px;
-}
+
 .flex-container a:active,
 .flexslider a:active,
 .flex-container a:focus,
