@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20130828052758) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "appointments", force: true do |t|
-    t.date     "day",            limit: 255
-    t.string   "requested_time"
+    t.date     "day"
+    t.time     "requested_time"
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
