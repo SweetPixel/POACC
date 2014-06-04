@@ -5,11 +5,12 @@ server "sweetpixelstudios.com", :web, :app, :db, primary: true
 set :application, "poacc"
 set :user, "deployer"
 set :deploy_to, "/home/#{user}/apps/#{application}"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:SweetPixel/POACC.git"
+set :repository, "."
+set :local_repository, "."
 set :branch, "master"
 
 default_run_options[:pty] = true
@@ -46,11 +47,10 @@ namespace :deploy do
 
   desc "Make sure local git is in sync with remote."
   task :check_revision, roles: :web do
-    unless `git rev-parse HEAD` == `git rev-parse origin/master`
+    unless `git rev-parse HEAD` == `git rev-parse github/master`
       puts "WARNING: HEAD is not the same as origin/master"
       puts "Run `git push` to sync changes."
       exit
     end
   end
-  before "deploy", "deploy:check_revision"
 end
