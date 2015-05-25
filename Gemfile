@@ -39,7 +39,8 @@ gem 'gmaps4rails'
 gem 'actionpack-action_caching'
 gem 'actionpack-page_caching'
 gem 'rails-observers'
-gem 'spud_core', :git => "git@github.com:aliirz/spud_core_admin.git"
+# gem 'spud_core', :git => "git@github.com:aliirz/spud_core_admin.git"
+gem 'spud_core'
 gem 'spud_photos', :git => "https://github.com/aliirz/spud_photos.git"
 
 
