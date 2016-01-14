@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require twitter/bootstrap
 //= require lightbox
 //= require bootstrap-datepicker
@@ -33,4 +34,3 @@
   	format: 'yy-mm-dd'
   });
   $('#timepicker').timepicker();
-

@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require jquery.ui.all
+ *= require jquery-ui
  *= require lightbox
  *= require colorbox-rails
  *= require bootstrap-datepicker
@@ -17,5 +17,3 @@
  *= require social-share-button
  *= require_tree .
  */
-
-
