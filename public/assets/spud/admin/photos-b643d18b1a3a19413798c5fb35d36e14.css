@@ -1,0 +1,129 @@
+/* Thumbnails
+---------------------------- */
+
+.spud_admin_photo_ui_thumbs{
+  height: 300px;
+  padding: 0;
+  border: 1px solid #cacaca;
+  margin: 15px 0;
+  overflow-y: scroll;
+}
+.spud_admin_photo_ui_thumb{
+  width: 125px;
+  height: 125px;
+  float: left;
+  background: #666;
+  background-clip: content-box;
+  margin: 16px;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0 0 5px black, inset 0 0 50px rgba(0,0,0,0.25);
+  border-radius: 15px;
+  -webkit-transition-property: box-shadow;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+}
+.spud_admin_photo_ui_thumb_small{
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+  margin: 12px;
+}
+.spud_admin_photo_ui_thumb:hover{
+  box-shadow: 0 0 5px black;
+}
+.spud_admin_photo_ui_thumbs_selectable .spud_admin_photo_ui_thumb{
+  cursor: pointer;
+}
+.spud_admin_photo_ui_thumbs_selectable .spud_admin_photo_ui_thumb_controls{
+  display: none;
+}
+.spud_admin_photo_ui_thumb_selected{
+  border: 3px solid #006CCC;
+  margin: 13px;
+}
+.spud_admin_photo_ui_thumb_small.spud_admin_photo_ui_thumb_selected{
+  margin: 9px;
+}
+.spud_admin_photo_ui_thumbs_sortable .spud_admin_photo_ui_thumb{
+  cursor: move;
+}
+.spud_admin_photo_ui_thumb h5{
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 3px 8px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.spud_admin_photo_ui_thumb_controls{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 4px;
+  display: inline-block;
+  background: rgba(0,0,0,0.5);
+  border-bottom-right-radius: 15px;
+}
+.spud_admin_photos_btn_remove, .spud_admin_photos_btn_delete{
+  background: url('/assets/spud/photos/buttons/x_16x16.png');
+  height: 16px;
+  width: 16px;
+  text-indent: -7777px;
+  display: inline-block;
+  margin: 0 4px;
+}
+.spud_admin_photos_btn_edit{
+  background: url('/assets/spud/photos/buttons/cog_16x16.png');
+  height: 16px;
+  width: 16px;
+  text-indent: -7777px;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+/* Upload Queue
+---------------------------- */
+.spud_admin_photo_progress{
+  margin: 10px 0;
+}
+#spud_admin_photo_upload_queue{
+  display: none;
+  background: white;
+  padding: 15px;
+  margin: 0 0 0 10px;
+  width: 250px;
+  height: 270px;
+  float: right;
+  border: 1px solid #cacaca;
+  overflow-y: scroll;
+}
+ 
+/* Gallery Form
+---------------------------- */
+.spud_admin_photos_selection_left{
+  width: 520px;
+  margin-right: 18px;
+  float: left;
+}
+.spud_admin_photos_selection_right{
+  width: 400px;
+  float: left;
+}
+.spud_admin_photos_selection_left h4, .spud_admin_photos_selection_right h4{
+  font-weight: normal;
+  margin: 15px 0;
+}
+#spud_admin_photo_gallery_form .spud_admin_photo_ui_thumb_controls{
+  display: none;
+}
